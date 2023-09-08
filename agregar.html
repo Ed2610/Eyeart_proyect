@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>E&E Art/ Gestion Productos</title>
+        <link rel ="stylesheet" href="Gestionar.css">
+        <link rel="icon" href="Imagenes/logo1.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script>
+              function add()
+                {
+                    document.getElementById('alertadd').style.display = "flex";
+                }
+
+                function addout()
+                {
+                    document.getElementById('alertadd').style.display = "none";
+                }
+
+
+                function add2()
+                {
+                    document.getElementById('alertadd2').style.display = "flex";
+                }
+
+                function addout2()
+                {
+                    document.getElementById('alertadd2').style.display = "none";
+                }
+
+                
+                function agregar()
+                {
+                alert("Se ha registrado el producto satisfactoriamente");
+                document.getElementById('alertadd').style.display = "none";
+                }
+
+                function agregar2()
+                {
+                alert("Se ha editado el producto satisfactoriamente");
+                document.getElementById('alertadd2').style.display = "none";
+                }
+
+
+                function eliminar(){
+                    alert("Se ha eliminado el producto correctamente");
+                    document.getElementById('fila-cod').style.display = "none";
+                    document.getElementById('fila-pro').style.display = "none";
+                    document.getElementById('fila-cantidad').style.display = "none";
+                    document.getElementById('fila-precio').style.display = "none";
+                    document.getElementById('fila-total').style.display = "none";
+                    document.getElementById('fila-fa').style.display = "none";
+                    
+                }   
+
+                function eliminar1(){
+                    alert("Se ha eliminado el producto correctamente");
+                    document.getElementById('fila1-cod').style.display = "none";
+                    document.getElementById('fila1-pro').style.display = "none";
+                    document.getElementById('fila1-cantidad').style.display = "none";
+                    document.getElementById('fila1-precio').style.display = "none";
+                    document.getElementById('fila1-total').style.display = "none";
+                    document.getElementById('fila1-fa').style.display = "none";
+                }  
+
+                function eliminar2(){
+                    alert("Se ha eliminado el producto correctamente");
+                    document.getElementById('fila2-cod').style.display = "none";
+                    document.getElementById('fila2-pro').style.display = "none";
+                    document.getElementById('fila2-cantidad').style.display = "none";
+                    document.getElementById('fila2-precio').style.display = "none";
+                    document.getElementById('fila2-total').style.display = "none";
+                    document.getElementById('fila2-fa').style.display = "none";
+                }
+
+                function eliminar3(){
+                    alert("Se ha eliminado el producto correctamente");
+                    document.getElementById('fila3-cod').style.display = "none";
+                    document.getElementById('fila3-pro').style.display = "none";
+                    document.getElementById('fila3-cantidad').style.display = "none";
+                    document.getElementById('fila3-precio').style.display = "none";
+                    document.getElementById('fila3-total').style.display = "none";
+                    document.getElementById('fila3-fa').style.display = "none";
+                }
+
+                function eliminar4(){
+                    alert("Se ha eliminado el producto correctamente");
+                    document.getElementById('fila4-cod').style.display = "none";
+                    document.getElementById('fila4-pro').style.display = "none";
+                    document.getElementById('fila4-cantidad').style.display = "none";
+                    document.getElementById('fila4-precio').style.display = "none";
+                    document.getElementById('fila4-total').style.display = "none";
+                    document.getElementById('fila4-fa').style.display = "none";
+                }
+
+                function cerrar(){
+                    alert("Se ha cerrado la sesion correctamente");
+                    
+                }
+                
+
+        </script>
+    </head>
+    <body>
+       
+
+        <div class="alert-opacity" id="alertadd">
+            <div class = "agregarpro">
+                <div class="datos">
+                    <div class="titulo">
+                        Agregar Producto --
+                    </div>
+                    <div class=" inputs">
+                        <select name="" id="mostrar">
+                            <option value="">10</option>
+                            <option value="">5</option>
+                        </select>
+                        <label for="Archivos">Virtual</label>
+                        <input type="checkbox" id="Archivos"  value="Archivos" />
+                        <label for="Archivos">Descargable</label>
+                        <input type="checkbox" id="Archivos"  value="Archivos" />
+                        </div>
+                    </div>
+                    
+            <div class = "contenedor-add">
+                <div class="menu-add">
+                    <div class="General">
+                       <h5>General</h5>
+                    </div> 
+                    <div class="General">
+                        <h5>Atributos</h5>
+                     </div> 
+                     <div class="General">
+                        <h5>Compra</h5>
+                     </div> 
+                </div>
+                <div class="Descripcion-producto">
+                    <div class = "Contenedor-inputs">
+                        <div class = "inputs">
+                        Nombre*<input type="text" >
+                        </div>
+                        <div class = "inputs">
+                        Descripcion<input type="text" class="descp" >
+                        </div>
+                    </div>
+                    <div class = "Contenedor-inputs">
+                        <div class = "inputs">
+                        Modelo<input type="text" >
+                        </div>
+                        <div class = "inputs">
+                        Unidades<input type="number" >
+                        </div>
+                        <div class = "inputs">
+                        Fecha de vencimiento<input type="date" >
+                        </div>
+                    </div>
+                    <div class = "Contenedor-inputs">
+                        <div class = "inputs">
+                            Stock Inicial
+                        <input type="number" >
+                    </div>
+                        <div class = "inputs">
+                            Stock Minimo
+                            <input type="number" >
+                        </div>
+                        
+                    </div>
+                    <div class = "Contenedor-btn">
+                        <button class="btn1" onclick="addout()">
+                            Cancelar
+                        </button>
+                        <button class="btn2" onclick="agregar()">
+                            Agregar Producto
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+
+
+
+        <div class="alert-opacity" id="alertadd2">
+            <div class = "agregarpro">
+                <div class="datos">
+                    <div class="titulo">
+                        Editar Producto --
+                    </div>
+                    <div class=" inputs">
+                        <select name="" id="mostrar">
+                            <option value="">10</option>
+                            <option value="">5</option>
+                        </select>
+                        <label for="Archivos">Virtual</label>
+                        <input type="checkbox" id="Archivos"  value="Archivos" />
+                        <label for="Archivos">Descargable</label>
+                        <input type="checkbox" id="Archivos"  value="Archivos" />
+                        </div>
+                    </div>
+                    
+            <div class = "contenedor-add">
+                <div class="menu-add">
+                    <div class="General">
+                       <h5>General</h5>
+                    </div> 
+                    <div class="General">
+                        <h5>Atributos</h5>
+                     </div> 
+                     <div class="General">
+                        <h5>Compra</h5>
+                     </div> 
+                </div>
+                <div class="Descripcion-producto">
+                    <div class = "Contenedor-inputs">
+                        <div class = "inputs">
+                        Nombre*<input type="text" >
+                        </div>
+                        <div class = "inputs">
+                        Descripcion<input type="text" class="descp" >
+                        </div>
+                    </div>
+                    <div class = "Contenedor-inputs">
+                        <div class = "inputs">
+                        Modelo<input type="text" >
+                        </div>
+                        <div class = "inputs">
+                        Unidades<input type="number" >
+                        </div>
+                        <div class = "inputs">
+                        Fecha de vencimiento<input type="date" >
+                        </div>
+                    </div>
+                    <div class = "Contenedor-inputs">
+                        <div class = "inputs">
+                            Stock Inicial
+                        <input type="number" >
+                    </div>
+                        <div class = "inputs">
+                            Stock Minimo
+                            <input type="number" >
+                        </div>
+                        
+                    </div>
+                    <div class = "Contenedor-btn">
+                        <button class="btn1" onclick="addout2()">
+                            Cancelar
+                        </button>
+                        <button class="btn2" onclick="agregar2()">
+                            Agregar Producto
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="file:///C:/Users/user/Documents/E&E/E&E.html">Inicio</a></li>
+                <li><a href="file:///C:/Users/user/Documents/E&E/Catalogo.html">Productos</a>
+                    <ul class = "submenu">
+                        <li><a href="file:///C:/Users/user/Documents/E&E/Catalogo.html">Cudernos</a></li>
+                        <li><a href="file:///C:/Users/user/Documents/E&E/Catalogo.html">Lapices</a></li>
+                    </ul>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Acerca De</a></li>
+                <li><a href="">Contacto</a></li>
+                <div class = "iconos">
+                    <div class = "inicio">
+                        <a href ="file:///C:/Users/Aprendiz/Documents/E&E/E&E.html">
+                       <i class="fa-solid fa-door-open" onclick="cerrar()"></i>
+                    </a>
+                    </div>
+                </div>
+            </ul>
+        </li>
+        </nav>
+        <div class="contenedor">
+            <div class="titulo">
+                <h1>Punto de Gestion de Productos</h1>
+            </div>
+            <div class="buscar-codigo">
+                <h4>Productos</h4>
+                <input type="text" placeholder="Ingresa el codigo de barras o nombre del Producto">
+
+            </div>
+            <div class="gestion">
+                <div class="titulo">
+                    <h2>Total de Productos: 5 Stock</h2>
+                </div>
+                <div class="botones">
+                    <button class="btnadd" onclick="add()"> 
+                        <i class="fa-solid fa-plus"></i> 
+                        Agregar Producto
+                    </button>
+                    <a href="Reporte.xlsx" download="Reporte" class="descargar-reporte"><button class="btnreport"> 
+                        <i class="fa-solid fa-file"></i>
+                        Generar Reporte
+                    </button>
+                    </a>
+                </div>
+            </div>
+            <div class="filtro">
+                <div class = "registros">
+                    <label for="mostrar">Mostrar Registros</label> <select name="" id="mostrar">
+                        <option value="">10</option>
+                        <option value="">5</option>
+                    </select>
+                </div>
+                <div class="buscador">
+                    <div class = "inc">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input type="text" placeholder="Buscar Producto...">
+                </div>
+        </div>
+        <div class="contenedor-inventario">
+            <div class="codigo">
+                <div class="columna">
+                <h2>Codigo</h2>
+                </div>
+                <div class="filas" id="fila-cod">
+                    0000001
+                </div>
+                <div class="filas1" id="fila1-cod">
+                    0000002
+                </div>
+                <div class="filas2" id="fila2-cod">
+                    0000003
+                </div>
+                <div class="filas3" id="fila3-cod">
+                    0000004
+                </div>
+                <div class="filas4" id="fila4-cod">
+                    0000005
+                </div>
+            </div>
+            <div class="producto">
+                <div class="columna">
+                <h2>Producto</h2>
+                </div>
+                <div class="filas" id="fila-pro">
+                    Jabon de Glicerina Naranja
+                </div>
+                <div class="filas1" id="fila1-pro">
+                    Crema Facial
+                </div>
+                <div class="filas2" id="fila2-pro">
+                    Jabon Corporal
+                </div>
+                <div class="filas3" id="fila3-pro">
+                    Velas De Manzanilla
+                </div>
+                <div class="filas4" id="fila4-pro">
+                    Jabon Glicerina Mora
+                </div>
+            </div>
+            <div class="cantidad">
+                <div class="columna">
+                <h2>Cantidad</h2>
+                </div>
+                <div class="filas" id="fila-cantidad">
+                    5
+                </div>
+                <div class="filas1" id="fila1-cantidad">
+                    10
+                </div>
+                <div class="filas2" id="fila2-cantidad">
+                    2
+                </div>
+                <div class="filas3" id="fila3-cantidad">
+                    3
+                </div>
+                <div class="filas4" id="fila4-cantidad">
+                    4
+                </div>
+            </div>
+            <div class="Precio">
+                <div class="columna">
+                <h2>Precio</h2>
+                </div>
+                <div class="filas" id="fila-precio">
+                    $62.000,00 
+                </div>
+                <div class="filas1" id="fila1-precio">
+                    $16.500,00 
+                </div>
+                <div class="filas2" id="fila2-precio">
+                    $7.500,00 
+                </div>
+                <div class="filas3" id="fila3-precio">
+                    $8.500,00 
+                </div>
+                <div class="filas4" id="fila4-precio">
+                    $57.000,00 
+
+                </div>
+            </div>
+            <div class="Total">
+                <div class="columna">
+                <h2>Total</h2>
+                </div>
+                <div class="filas" id="fila-total">
+                    $310.000,00 
+                </div>
+                <div class="filas1" id="fila1-total">
+                    $165.000,00 
+                </div>
+                <div class="filas2" id="fila2-total">
+                    $15.000,00 
+                </div>
+                <div class="filas3" id="fila3-total">
+                    $25.500,00 
+                </div>
+                <div class="filas4" id="fila4-total">
+                    $228.000,00 
+                </div>
+            </div>
+            <div class="opciones">
+                <div class="columna">
+                <h2>Opciones</h2>
+                </div>
+                <div class="filas" id="fila-fa">
+                    <i class="fa-sharp fa-solid fa-trash" onclick="eliminar()"></i>
+                    <i class="fa-solid fa-pencil" onclick="add2()"></i>
+                </div>
+                <div class="filas1" id="fila1-fa">
+                    <i class="fa-sharp fa-solid fa-trash" onclick="eliminar1()"></i>
+                    <i class="fa-solid fa-pencil" onclick="add2()"></i>
+                </div>
+                <div class="filas2" id="fila2-fa"> 
+                    <i class="fa-sharp fa-solid fa-trash" onclick="eliminar2()"></i>
+                    <i class="fa-solid fa-pencil" onclick="add2()"></i>
+                </div>
+                <div class="filas3" id="fila3-fa">
+                    <i class="fa-sharp fa-solid fa-trash" onclick="eliminar3()"></i>
+                    <i class="fa-solid fa-pencil" onclick="add2()"></i>
+                </div>
+                <div class="filas4" id="fila4-fa">
+                    <i class="fa-sharp fa-solid fa-trash" onclick="eliminar4()"></i>
+                    <i class="fa-solid fa-pencil" onclick="add2()"></i>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    </body>
+</html>

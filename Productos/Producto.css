@@ -1,0 +1,761 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #ebebeb;
+    width: 100%;
+}
+
+
+nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #07570eb0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    }
+nav .logo a{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 50px;
+}
+
+.menu{
+    
+    list-style: none;
+    display: flex;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: fit-content;
+    align-items: center;
+    margin: auto;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    display: block;
+    transition: all .3s;
+}
+.menu li{
+    display: block;
+    text-align: center;
+    padding: 6px 14px;
+}
+
+.menu li a:hover{
+    color: #bdbd04;
+    transition: all .3s;
+}
+
+.submenu{
+    position: absolute;
+    display: none;
+    transition: 0.5s;
+}
+.submenu li{
+    background: #07570eb0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+
+
+}
+.submenu li a{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu li:hover .submenu{
+    display: block;
+    transition: 1.5s;
+}
+.logo img{
+    height: 100px;
+}
+.buscador {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    width: 100%;
+    background: white;
+    height: 138px;
+    justify-content: center;
+    align-items: center;
+}
+.buscador li{
+    display: inline-block;
+    text-align: center;
+    padding: 6px 14px;
+}
+
+.buscador input{
+    width: 300px;
+    background: #e7e7e7;
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 6px ;
+    margin: 0 0 0 50px;
+}
+
+.iconos {
+    width: 250px;
+    margin: 0 0 0 50px;
+}
+.iconos .inicio {
+    margin: 44px 6px;
+    width: 50px;
+    display: inline-flex;
+    height: 50px;
+    background: #e7e7e7;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.inicio a{
+    height: 100%;
+}
+
+.iconos .inicio:hover{
+
+    background: #07570eb0;
+    transition: 0.5s;
+    color: #fcfcfc;
+    
+}
+
+.inicio :hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.fa-user{
+    color:#000000;
+    font-size: 25px;
+    margin: 12px 14px;
+    width: 60px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.fa-cart-shopping{
+    color:#000000;
+    font-size: 25px;
+    margin: 12px 14px;
+    width: 60px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.fa-door-open{
+    color:#000000;
+    font-size: 25px;
+    margin: 12px 12px;
+    width: 60px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+
+/*producto*/
+
+.recorrido{
+    margin:  120px 390px 50px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.recorrido a{
+    margin:  0 10px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.recorrido a:hover{
+    color: #bdbd04;
+    transition: all .3s;
+}
+
+.recorrido h4{
+    margin:  0 10px;
+    color: #07570eb0;
+    font-size: 13px;
+    transition: all .3s;
+}
+
+.contenedor-producto {
+    width: 65%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.producto{
+    display: flex;
+    padding: 20px;
+    border-block-end: 1px solid rgb(173, 173, 173);
+    background: white;
+}
+.select-imagen{
+    height: 200px;
+}
+.select-imagen img{
+    height: 100%;
+    width: 200px;
+    display: list-item;
+    margin: 0 20px 20px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.imagen .img2{
+    display: none;
+    height: 500px;
+}
+
+.select-imagen img:hover{
+    opacity: 0.5;
+    transition: all .3s;
+}
+
+.imagen{
+    height: 500px;
+}
+
+.imagen img{
+    height: 100%;
+    width: 400px;
+}
+
+.info-pro{
+    padding: 1px 40px 0 40px;
+}
+
+.info-pro h1{
+    margin: 30px 0 30px 0;
+}
+.info-pro h3{
+    text-decoration: line-through;
+    color: #8f8f8f;
+}
+
+.info-pro h2{
+    color: #07570eb0;
+}
+.botones{
+    padding: 20px 0;
+    width: 50%;
+}
+
+.botones input{
+    padding: 10px ;
+    width: 30%;
+    text-align: center;
+}
+
+.btn-carrito{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    background: white;
+    font-weight: 800;
+    color: #07570eb0;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    border: 1px solid#07570eb0;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn-carrito:hover{
+    background: #07570eb0;
+    color: white;
+    border: none;
+    transition: all .3s;
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-comprar{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    background: #07570eb0;
+    font-weight: 800;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+.btn-comprar:hover{
+    background: #bdbd04;
+    border: none;
+    transition: all .3s;
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-descripcion{
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.sobre{
+    width: 100%;
+    border-left:6px solid #07570eb0;
+}
+
+.sobre h1{
+    margin: 0 10px;
+}
+
+.cat{
+    margin-top: 40px;
+    padding: 0 40px;
+    background: white;
+    width: 100%;
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+.cat-descp{
+    margin: 0  40px 0  0 ;
+    padding: 0 40px 0 0;
+    border-right: 1px solid #000000;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.cat-espe{
+    margin: 0  40px 0  0 ;
+    padding: 0 40px 0 0;
+    border-right: 1px solid #000000;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.descripcion{
+    margin: 20px 0;
+    background: white;
+    padding: 40px;
+}
+
+.especificacion{
+    margin: 20px 0;
+    background: white;
+    padding: 40px;
+    font-weight: 600;
+    display: none;
+}
+
+.contenido1{
+    background: #ebebeb;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.contenido1 .cate{
+    width: 50%;
+   
+}   
+
+.titulo{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.raya{
+    width: 400px;
+    height: 5px;
+    background: #07570eb0;
+}
+
+.raya1{
+    width: 100%;
+    height: 5px;
+    background: #07570eb0;
+}
+
+.raya2{
+    width: 100%;
+    height: 5px;
+    background: #07570eb0;
+    display: none;
+}
+
+.container-cards{
+    justify-content: center;
+    display: flex;
+
+}
+
+
+.cards2 {
+    color: #07570eb0;
+    width: 400px;
+    height: 730px;
+    margin: 40px;
+    border: 1px solid rgb(221, 221, 221);
+    background: white;
+    cursor: pointer;
+    transition: 0.5s;
+    animation-timing-function: cubic-bezier(0.165,0.84,0.44,1);
+    overflow: hidden;
+}
+
+.container-cards .cards2:hover {
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(221, 221, 221);
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.cards2  .ima{
+    width: 400px;
+    height: 500px;
+}
+
+.cards2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.cards2 .contenido{
+    padding: 30px;
+    transition: 0.5s;
+    background: white;
+    
+}
+.cards2 .contenido a:hover{
+    color:#07570eb0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.cards2 .contenido h3{
+    margin-top: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+
+.cards2 .contenido a{
+    transition: 0.5s;
+}
+
+
+.cards2 .contenido h4{
+    margin-top: 5px;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+.cards2 .contenido h2{
+    margin-top: 5px;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+.boton{
+    margin-top: 20px;
+    color: white;
+    background: #07570eb0;
+    width: 200px;
+    height: 44px;
+    border: 1px solid #07570eb0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+}
+.boton:hover{
+    background: #bdbd04;
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    border: none;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+.pie-pagina{
+    width: 100%;
+    background-color: white;
+}
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 100px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 a{
+  
+    text-decoration: none;
+    color: black;
+    transition: all .3s;
+}
+
+.pie-pagina .grupo-1 a:hover{
+  
+    text-decoration: none;
+    color: #bdbd04 ;
+    transition: all .3s;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: black;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: black;
+    margin-right: 10px;
+    background-color: #07570eb0;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #07570eb0;
+    background: #bdbd04;
+    
+}
+.pie-pagina .grupo-2{
+    background: #07570eb0;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+.alert-opacity {
+    position: fixed;
+    background: #00000087;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.carrito{
+    background: white;
+}
+
+.encabezado{
+    display: flex;
+    box-shadow: 0px -1px 20px rgb(0 0 0 / 20%);
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+
+.encabezado .fa-solid:hover {
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.encabezado .fa-solid:hover {
+    color: red;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.carrito .titulo-carrito{
+    width: 80%;
+    font-size: 25px;
+    font-weight: 600 ;
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cero{
+    padding: 30px 40px 70px;
+    text-align: center;
+    color: gray;
+}
+
+.compra1{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.compra1 .info{
+    width: 40%;
+}
+
+
+.compra1 img{
+    width: 70px;
+    height: 70px;
+    margin: 0 20px 0 0;
+    border-radius: 6px;
+    border: 1px solid #dadada;
+}
+
+.compra1 .precio{
+    margin: 0 40px;
+    color: #07570eb0;
+    font-weight: 600;
+}
+.compra1 .precio h4{
+    display: contents;
+    margin-right: 5px;
+}
+.compra1 .precio label{
+    color: #000000;
+    font-weight: 400;
+}
+.compra1 .precio input{
+    width: 30px;
+}
+
+
+.compra1 .fa-solid:hover {
+    color: red;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.carrito .subtotal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.subtotal .total{
+    background: #dfdfdf;
+    width: 70%;
+    padding: 20px 30px;
+    border-radius: 7px;
+}
+
+.boton-comprar{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.btn-pedido{
+    background: #07570eb0;
+    color: white;
+    border-radius: 6px;
+    padding: 20px 30px;
+    width: 70%;
+    font-size: 15px;
+    font-weight: 600 ;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all .3s;
+
+}
+
+.btn-pedido:hover{
+    background: #bdbd04;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+
+
+#pro1{
+    display: none;
+}
+#pro2{
+    display: none;
+}
+#pro3{
+    display: none;
+}
+#pro4{
+    display: none;
+}
+#pro5{
+    display: none;
+}
+#pro6{
+    display: none;
+}
+#pro7{
+    display: none;
+}
+#pro8{
+    display: none;
+}
+#pro9{
+    display: none;
+}
+#pro10{
+    display: none;
+}
+#pro11{
+    display: none;
+}
+
+
+
+
+

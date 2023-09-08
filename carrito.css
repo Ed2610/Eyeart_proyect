@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #ebebeb;
+    width: 100%;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #07570eb0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    }
+nav .logo a{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 50px;
+}
+
+.menu{
+    
+    list-style: none;
+    display: flex;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: fit-content;
+    align-items: center;
+    margin: auto;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    display: block;
+    transition: all .3s;
+}
+.menu li{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 6px 14px;
+}
+
+.menu li a:hover{
+    color: #bdbd04;
+    transition: all .3s;
+}
+
+.submenu{
+    position: absolute;
+    display: none;
+    transition: 0.5s;
+}
+.submenu li{
+    background: #07570eb0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+
+
+}
+.submenu li a{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu li:hover .submenu{
+    display: block;
+    transition: 1.5s;
+}
+
+.recorrido {
+    margin: 120px 360px 50px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.recorrido a{
+    margin:  0 10px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.recorrido a:hover{
+    color: #bdbd04;
+    transition: all .3s;
+}
+
+.recorrido h4{
+    margin:  0 10px;
+    color: #07570eb0;
+    font-size: 13px;
+    transition: all .3s;
+}
+
+.recorrido2 {
+    margin: 20px 360px 50px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-producto{
+    width: 50%;
+    margin: 0 20px;
+}
+.producto{
+    background: white;
+    margin:  0 0 20px 0;
+}
+
+.producto-card{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    
+}
+
+.producto-card .imagen{
+    width: 30%;
+    height: 250px;
+}
+
+.producto-card .imagen img{
+    width: 100%;
+    height: 100%;
+}
+.card{
+    padding: 0 20px;
+    margin: 30px 0;
+}
+
+
+
+.mod{
+    display: flex;
+    border-block-start: 1px solid black;
+    margin-top: 30px;
+    padding: 20px 0 0 0;
+    align-items: center;
+}
+
+.mod label{
+    margin: 0 10px 0 40px;
+}
+
+.mod input{
+    margin: 0 40px 0 0;
+    padding: 10px;
+    width: 90px;
+}
+
+
+.cerrar{
+    display: flex;
+    justify-content: end;
+}
+
+.btn-cerrar{
+    background: #07570eb0;
+    border: none;
+    color: white;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn-cerrar:hover{
+    background: #bdbd04;
+    transition: all .3s;
+
+}
+.btn-cerrar2{
+    background: #07570eb0;
+    border: none;
+    color: white;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn-cerrar2:hover{
+    background: #bdbd04;
+    transition: all .3s;
+
+}
+.btn-cerrar3{
+    background: #07570eb0;
+    border: none;
+    color: white;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.btn-cerrar3:hover{
+    background: #bdbd04;
+    transition: all .3s;
+
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.detalle{
+    background: white;
+    padding: 20px;
+    height: 342px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.suma-pro{
+    border-block-end: 1px solid black;
+    margin: 20px 0 0 0;
+    padding: 0 0 10px 0 ;
+}
+
+.btn-continuar{
+    margin-top: 30px;
+    color: #bdbd04;
+    background: white;
+    width: 190px;
+    height: 44px;
+    border:1px solid #bdbd04;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-continuar:hover{
+    background: #bdbd04;
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: 700;
+    border: none;
+    transition: 0.5s;
+}
+
+
+.btn-pedido{
+    margin-top: 30px;
+    color: white;
+    background: #07570eb0;
+    width: 190px;
+    height: 44px;
+    border: 1px solid #07570eb0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-pedido:hover{
+    background: #bdbd04;
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    border: none;
+    transition: 0.5s;
+}
+
+
+
+.pie-pagina{
+    width: 100%;
+    background-color: white;
+}
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 100px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 a{
+  
+    text-decoration: none;
+    color: black;
+    transition: all .3s;
+}
+
+.pie-pagina .grupo-1 a:hover{
+  
+    text-decoration: none;
+    color: #bdbd04;
+    transition: all .3s;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: black;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: black;
+    margin-right: 10px;
+    background-color: #07570eb0;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #07570eb0;
+    background: #bdbd04;
+    
+}
+.pie-pagina .grupo-2{
+    background: #07570eb0;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
