@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #F8F8F8;
+    width: 100%;
+    justify-content: center;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formulario{
+    background: white;
+    border: 1px solid rgb(221, 221, 221);
+    position: absolute;
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    animation:aparecerblock 2s;
+    animation-timing-function: cubic-bezier(0.165,0.84,0.44,1);
+ 
+}
+
+.formulario .titulo{
+    margin: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.formulario .titulo h1{
+    margin: auto;
+}
+
+.formulario .titulo a{
+    text-decoration: none;
+    color: #07570eb0;
+    transition: 0.5s;
+    
+}
+
+.formulario .titulo a:hover{
+    text-decoration: none;
+    color: rgb(189, 189, 4);
+    transition: 0.5s;
+}
+
+.formulario .titulo h5{
+    margin: 10px auto;
+}
+
+.imag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario .inputs{
+    display: grid;
+    margin: 40px 30px;
+
+}
+
+
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 40px;
+}
+
+.botones h5{
+    margin: 40px 0;
+}
+
+.botones a{
+    text-decoration: none;
+    color: #07570eb0;
+    transition: 0.5s;
+}
+
+.botones a:hover{
+    text-decoration: none;
+    color: rgb(189, 189, 4);
+    transition: 0.5s;
+}
+.btn1{
+    width: 50%;
+    margin-top: 20px;
+    color: #07570eb0;
+    background: #ffffffa6;
+    height: 44px;
+    border: 1px solid #07570eb0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.btn1:hover{
+    background: #07570eb0;
+    color: white;
+    transition: 0.5s;
+}
+
+.inputs select{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="text" i] {
+    
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+input :hover[type="text" i] {
+    color: rgb(189, 189, 4);
+}
+    
+
+input[type="password" i] {
+    
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.pie-pagina{
+    width: 100%;
+    background-color: white;
+}
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 100px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 a{
+  
+    text-decoration: none;
+    color: #07570eb0;
+    transition: all .3s;
+}
+
+.pie-pagina .grupo-1 a:hover{
+  
+    text-decoration: none;
+    color: rgb(189, 189, 4) ;
+    transition: all .3s;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: black;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: black;
+    margin-right: 10px;
+    background-color: #07570eb0;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #07570eb0;
+    background: rgb(189, 189, 4);
+    
+}
+.pie-pagina .grupo-2{
+    background: #07570eb0;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+@keyframes aparecerblock{
+    0%{
+        opacity: 0;   
+        transform: translate3D(0, -27px, 0);
+        
+        }
+    50%{
+        opacity: 0;
+        transition: opacity .2s linear;
+    }
+
+   
+    100% {
+        opacity: 1;
+        transform: translatex(0);
+        transform: translate3d(10px)
+    }
+}

@@ -1,0 +1,253 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: rgb(255, 255, 255);
+    width: 100%;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    }
+nav .logo a{
+    font-size: 30px;
+    color: #07570e;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 50px;
+}
+.buscador{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    width: 100%;
+    height: 138px;
+    border-block-end: 1px solid;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin: 75px 0;
+
+}
+.logo img{
+    height: 100px;
+}
+.buscador li a{
+    text-decoration: none;
+    color: #07570e;
+    padding: 20px;
+    display: block;
+    transition: all .3s;
+    
+}
+.buscador li{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0 180px;
+    padding: 6px 14px;
+}
+
+.buscador input{
+    width: 300px;
+    background: #e7e7e7;
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 6px ;
+}
+
+.iconos{
+    width: 150px;
+    margin: 0 0 0 50px;
+}
+.iconos .inicio{
+    margin: 44px 6px;
+    width: 50px;
+    display: inline-flex;
+    height: 50px;
+    background: #e7e7e7;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.inicio a{
+    height: 100%;
+}
+
+.iconos .inicio:hover{
+
+    background: #07570e;
+    transition: 0.5s;
+    color: #fcfcfc;
+    
+}
+
+.inicio :hover i {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+
+.fa-solid{
+    color:#000000;
+    font-size: 25px;
+    margin: 12px 14px;
+    width: 60px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.fa-door-open{
+    color:#000000;
+    font-size: 25px;
+    margin: 12px 12px;
+    width: 60px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.menu{
+    
+    list-style: none;
+    display: flex;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: fit-content;
+    align-items: center;
+    margin: auto;
+}
+.menu li a{
+    text-decoration: none;
+    color: #07570e;
+    padding: 20px;
+    display: block;
+    transition: all .3s;
+    
+}
+.menu li{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 6px 14px;
+}
+
+.menu li a:hover{
+    color: greenyellow;
+    transition: all .3s;
+}
+
+.submenu{
+    position: absolute;
+    display: none;
+    transition: 0.5s;
+}
+.submenu li{
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+
+
+}
+.submenu li a{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu li:hover .submenu{
+    display: block;
+    transition: 1.5s;
+}
+
+.catalogo{
+    width: 100%;
+    height: 100%;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.filtro{
+    background: white;
+    color: aquamarine;
+    width: 15%;
+    height: 80%;
+    
+}
+
+.cards{
+    width: 75%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.card{
+    width: 300px;
+    margin: 0 20px 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.card .info{
+    margin: 40px 20px;
+    
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+}
+
+.card h5{
+    color:rgb(100, 187, 158) ;
+}
+
+.card h2{
+    font-size: 16px;
+}
+
+.card h3{
+    color:rgb(100, 187, 158) ;
+    margin: 10px 0;
+}
+
+.btn1{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    background: rgb(100, 187, 158);
+    font-weight: 800;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    border: none;
+}
+
+.pene{
+    width: 100%;
+    height: 500px;
+    background: #000000;
+}
