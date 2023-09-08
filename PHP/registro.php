@@ -30,17 +30,21 @@
                 <input type="text" name="Nombre" id="Nombre" placeholder = "Nombre">
                 <input type="text" name="Apellido" id="Apellido" placeholder = "Apellido">
                 <select name="TipoDocumento">
-                <option value="C.C">C.C</option>
-                <option value="T.I">T.I</option>
+                <option value="1">Cedula de Ciudadania</option>
+                <option value="2">Tarjeta De Identidad</option>
+                <option value="3">Pasaporte</option>
+                <option value="4">Cedula de Extranjeria</option>
+                <option value="5">Pasaporte Extranjero</option>
+                <option value="6">Visa</option>
                 </select>
                 <input type="text" name="NumeroDocumento" id="NumeroDocumento" placeholder = "Numero de documento">
                 <input type="text" name="Direccion" id="Direccion" placeholder = "Direccion">
                 <input type="text" name="Telefono" id="Telefono" placeholder = "Telefono">
-                <input type="email" name="Correo" id="Correo" placeholder = "Correo">
+                <input element type="email" name="Correo" id="Correo" placeholder = "Correo" class="correo">
                 <input type="password" name="Contrasena" id="Contrasena" placeholder = "Contraseña">
-                <select name="ciudad">
-                <option value="Bogota">Bogota</option>
-                <option value="Medellin">Medellin</option>
+                <select name="Ciudad_IdCiudad">
+                <option value="1">Bogota</option>
+                <option value="2">Medellin</option>
                 </select>
             </div>
             <div class = "botones">

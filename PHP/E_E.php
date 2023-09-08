@@ -20,12 +20,12 @@
                 </li>
                 <div class = "iconos">
                     <div class = "inicio">
-                        <a href ="inicio.html">
+                        <a href ="inicio.php">
                         <i class="fa-solid fa-user"></i>
                     </a>
                     </div>
                     <div class = "inicio">
-                        <a href ="registro.html">
+                        <a href ="registro.php">
                         <i class="fa-solid fa-door-open"></i>
                     </a>
                     </div>
@@ -33,17 +33,17 @@
             </ul>
             <ul class="menu">
                 <li><a href="">Inicio</a></li>
-                <li><a href="inicio.html">Productos</a>
+                <li><a href="inicio.php">Productos</a>
                     <ul class = "submenu">
-                        <li><a href="inicio.html">Jabones</a></li>
-                        <li><a href="inicio.html">Antibacterial</a></li>
-                        <li><a href="inicio.html">Velas</a></li>
-                        <li><a href="inicio.html">Cremas</a></li>
-                        <li><a href="inicio.html">Belleza</a></li>
+                        <li><a href="inicio.php">Jabones</a></li>
+                        <li><a href="inicio.php">Antibacterial</a></li>
+                        <li><a href="inicio.php">Velas</a></li>
+                        <li><a href="inicio.php">Cremas</a></li>
+                        <li><a href="inicio.php">Belleza</a></li>
                     </ul>
-                <li><a href="inicio.html">Servicios</a></li>
-                <li><a href="inicio.html">Acerca De</a></li>
-                <li><a href="inicio.html">Contacto</a></li>
+                <li><a href="inicio.php">Servicios</a></li>
+                <li><a href="inicio.php">Acerca De</a></li>
+                <li><a href="inicio.php">Contacto</a></li>
             </ul>
         </nav>
         <div class = "slider">
@@ -80,7 +80,7 @@
                     <h4><a>Jabones</h4></a>
                     <h3><a>Jabones de glicerina naranja</h3></a>
                     <h2>$62,000.00</h2>
-                    <a href ="inicio.html">
+                    <a href ="inicio.php">
                     <button class = "boton">
                         COMPRAR
                     </button>
@@ -95,7 +95,7 @@
                     <h4><a>Jabones</h4></a>
                     <h3><a>Jabones glicerina Calendula</h3></a>
                     <h2>$19,000.00</h2>
-                    <a href ="inicio.html">
+                    <a href ="inicio.php">
                         <button class = "boton">
                             COMPRAR
                         </button>
@@ -110,7 +110,7 @@
                     <h4><a>Antibacterial</h4></a>
                     <h3><a>Gel Antibacterial Eye Art</h3></a>
                     <h2>$35,000.00</h2>
-                    <a href ="inicio.html">
+                    <a href ="inicio.php">
                         <button class = "boton">
                             COMPRAR
                         </button>
@@ -130,10 +130,10 @@
                 <div class="box">
                     <h2>SOBRE NOSOTROS</h2>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="inicio.html">">Catalogo</a></li>
-                    <li><a href="inicio.html">Servicios</a></li>
-                    <li><a href="inicio.html"> Acerca de</a></li>
-                    <li><a href="inicio.html"> Contacto</a></li>
+                    <li><a href="inicio.php">">Catalogo</a></li>
+                    <li><a href="inicio.php">Servicios</a></li>
+                    <li><a href="inicio.php"> Acerca de</a></li>
+                    <li><a href="inicio.php"> Contacto</a></li>
                 </div>
                 <div class="box">
                     <h2>SOBRE NOSOTROS</h2>
