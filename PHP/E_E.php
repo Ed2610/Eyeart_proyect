@@ -6,6 +6,8 @@
         <link rel ="stylesheet" href="E_ECSS.css">
         <link rel="icon" href="Imagenes/logo1.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
         <nav>
@@ -46,14 +48,40 @@
                 <li><a href="inicio.php">Contacto</a></li>
             </ul>
         </nav>
-        <div class = "slider">
-            <ul>
-                <li><img src="https://eyeart.com.co/wp-content/uploads/2020/12/EE-Art-tienda-eye-art-tienda-1.png" alt=""></li>
-                <li><img src="https://previews.123rf.com/images/veleri/veleri1907/veleri190700045/130927452-banner-horizontal-con-ilustraci%C3%B3n-de-ne%C3%B3n-de-jabones-hechos-a-mano-con-naranja-ramitas-de-enebro.jpg" alt=""></li>
-                <li><img src="https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/bp-today/es_CO/pages/homepage/B-Banners-Today-1600x900.jpg?auto=format" alt=""></li>
-                <li><img src="https://www.protex-soap.com/content/dam/cp-sites/personal-care/protex-relaunch/latam/hero/protex-proteccion-antibacterial-home.jpg" alt=""></li>
-            </ul>
-        </div>
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+    </div>
+  
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+    <img src="https://eyeart.com.co/wp-content/uploads/2020/12/EE-Art-tienda-eye-art-tienda-1.png" alt="Los Angeles" class="d-block" style="width:100%; height:900px">
+    </div>
+    <div class="carousel-item">
+    <img src="https://previews.123rf.com/images/veleri/veleri1907/veleri190700045/130927452-banner-horizontal-con-ilustraci%C3%B3n-de-ne%C3%B3n-de-jabones-hechos-a-mano-con-naranja-ramitas-de-enebro.jpg" alt="Chicago" class="d-block" style="width:100%; height:900px">
+    </div>
+    <div class="carousel-item">
+    <img src="https://saviajabones.co/sites/default/files/styles/cetiia-banner-1280_x_500/public/diapositivas/Banners%20Savia_Mesa%20de%20trabajo%201%20copia_0.png?itok=a9BVXv7Q" alt="New York" class="d-block" style="width:100%; height:900px">
+    </div>
+    <div class="carousel-item">
+    <img src="https://www.protex-soap.com/content/dam/cp-sites/personal-care/protex-relaunch/latam/hero/protex-proteccion-antibacterial-home.jpg" alt="New York" class="d-block" style="width:100%; height:900px">
+    </div>
+    </div>
+  
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
         <div class = "container-info box-start box-anim" id= "box1">
             <h1>Creamos y fabricamos productos naturales de higiene y cuidado personal de la más calidad.</h1>
             

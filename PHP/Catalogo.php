@@ -1,3 +1,6 @@
+<?php
+
+?>
 <html>
     <!DOCTYPE = "html">
     <head>
@@ -237,7 +240,11 @@
                 document.getElementById('alertpro').style.display = "block";
             }
             
-
+            
+            function esperar() {
+            document.getElementById ('aa').style.display = "none";
+            document.getElementById ('car').style.display = "block";
+           }
 
                 
             

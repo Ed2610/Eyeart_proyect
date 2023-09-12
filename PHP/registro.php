@@ -37,9 +37,9 @@
                 <option value="5">Pasaporte Extranjero</option>
                 <option value="6">Visa</option>
                 </select>
-                <input type="text" name="NumeroDocumento" id="NumeroDocumento" placeholder = "Numero de documento">
+                <input type="number" name="NumeroDocumento" id="NumeroDocumento" placeholder = "Numero de documento">
                 <input type="text" name="Direccion" id="Direccion" placeholder = "Direccion">
-                <input type="text" name="Telefono" id="Telefono" placeholder = "Telefono">
+                <input type="number" name="Telefono" id="Telefono" placeholder = "Telefono">
                 <input element type="email" name="Correo" id="Correo" placeholder = "Correo" class="correo">
                 <input type="password" name="Contrasena" id="Contrasena" placeholder = "Contraseña">
                 <select name="Ciudad_IdCiudad">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="box">
                     <h2>SOBRE NOSOTROS</h2>
-                    <li><a href="file:///C:/Users/user/Documents/E_E/E_E.php">Inicio</a></li>
+                    <li><a href="E_E.php">Inicio</a></li>
                     <li><a href="#">Catalogo</a></li>
                     <li><a href="">Servicios</a></li>
                     <li><a href=""> Acerca de</a></li>

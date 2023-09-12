@@ -1,6 +1,29 @@
 
 <?php
-include 'validacion.php' 
+
+session_start();
+
+  if (isset($_SESSION['user_id'])) {
+    header('Location: /php-login');
+  }
+  require 'conexion.php';
+
+  if (!empty($_POST['usuario']) && !empty($_POST['contrasena'])) {
+    $records = $conn->prepare('SELECT id, Correo, Contrasena FROM usuario WHERE Correo = :usuario');
+    $records->bindParam(':usuario', $_POST['usuario']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
+
+    $message = '';
+
+    if (count($results) > 0 && password_verify($_POST['contrasena'], $results['contrasena'])) {
+      $_SESSION['user_id'] = $results['id'];
+      header("Location: /php-login");
+    } else {
+      $message = 'Sorry, those credentials do not match';
+    }
+  }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,6 +33,8 @@ include 'validacion.php'
         <link rel ="stylesheet" href="inicioCSS.css">
         <link rel="icon" href="Imagenes/logo1.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <script>
             /*
             function login(){
@@ -26,12 +51,18 @@ include 'validacion.php'
                 }
             }
             */
+           function cargar() {
+            document.getElementById ('aa').style.display = "none";
+            document.getElementById ('car').style.display = "block";
+           }
+
+
     </script>
     </head>
     <body>
         <div class = "contenedor">
         <div class = "formulario">
-        <form method="$_POST" action="validar.php">
+        <form method="$_POST" action="inicio.php">
             <div class="titulo">
                 <a href="E_E.php"><i class="fa-solid fa-arrow-left"></i> Volver</a>
                 <div class="imag">
@@ -45,12 +76,13 @@ include 'validacion.php'
                     <option value="value1">Cliente</option>
                     <option value="value2" >Administrador</option>
                   </select>
-                <input type="text" id="usuario" placeholder = "Usuario">
-                <input type="password"  id="contrasena" placeholder = "Contraseña">
+                <input name="usuario" type="text" id="usuario" placeholder = "Usuario">
+                <input name="contrasena" type="password"  id="contrasena" placeholder = "Contraseña">
             </div>
             <div class = "botones">
-            <button class = "btn1"  onclick="login()" input type="submit">
-                Iniciar Sesion
+            <button class = "btn1"  onclick="cargar()" input type="submit">
+                <div id = "aa">Iniciar Sesion</div>
+                <div class="spinner-border" id = "car" style = "display:none"></div>
             </button>
                 <a href="contraseña.php"><h5>¿HAS OLVIDADO TU CONTRASEÑA?</h5></a>
             </div>
