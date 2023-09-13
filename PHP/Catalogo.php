@@ -413,7 +413,7 @@
                     </div>
                 </div>
                 <div class="boton-comprar">
-                    <a href="file:///C:/Users/Aprendiz/Documents/E_E/TipoPago.html">
+                    <a href="file:///C:/Users/Aprendiz/Documents/E_E/TipoPago.php">
                         <button class="btn-pedido" id="btn-pedido">
                             Confirmar Peido
                         </button>
@@ -425,18 +425,18 @@
 
         <nav>
         <ul class="menu">
-            <li><a href="E_E.html">Inicio</a></li>
-            <li><a href="Catalogo.html">Productos</a>
+            <li><a href="E_E.php">Inicio</a></li>
+            <li><a href="Catalogo.php">Productos</a>
                 <ul class = "submenu">
-                    <li><a href="Catalogo.html">Jabones</a></li>
-                    <li><a href="Catalogo.html">Antibacterial</a></li>
-                    <li><a href="Catalogo.html">Velas</a></li>
-                    <li><a href="Catalogo.html">Cremas</a></li>
-                    <li><a href="Catalogo.html">Belleza</a></li>
+                    <li><a href="Catalogo.php">Jabones</a></li>
+                    <li><a href="Catalogo.php">Antibacterial</a></li>
+                    <li><a href="Catalogo.php">Velas</a></li>
+                    <li><a href="Catalogo.php">Cremas</a></li>
+                    <li><a href="Catalogo.php">Belleza</a></li>
                 </ul>
             <li><a href="">Servicios</a></li>
             <li><a href="">Acerca De</a></li>
-            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="Contacto.php">Contacto</a></li>
             
         </ul>
     </li>
@@ -453,12 +453,12 @@
             </li>
             <div class = "iconos">
                 <div class = "inicio">
-                    <a href ="cuenta.html">
+                    <a href ="cuenta.php">
                    <i class="fa-solid fa-user"></i>
                 </a>
                 </div>
                 <div class = "inicio">
-                    <a href ="E_E.html" onclick="cerrar()">
+                    <a href ="E_E.php" onclick="cerrar()">
                     <i class="fa-solid fa-door-open"></i>
                 </a>
                 </div>
@@ -472,7 +472,7 @@
         </div>
 
         <div class = "recorrido">
-            <a href="E_E.html">Home</a> > <h4>Producto</h4> 
+            <a href="E_E.php">Home</a> > <h4>Producto</h4> 
          </div>
 
     <div class = "catalogo">
@@ -567,7 +567,7 @@
                         <h5>Jabones</h5>
                         <h2>Jabon Glicerina Naranja </h2>
                         <h3>$62.000</h3>
-                        <a href="Productos/Producto.html">
+                        <a href="Productos/Producto.php">
                         <button class = "btn1">
                             Comprar
                         </button>
@@ -583,7 +583,7 @@
                         <h5>Velas</h5>
                         <h2>Velas de Manzanilla  </h2>
                         <h3>$8.500</h3>
-                        <a href="Productos/Producto1.html">
+                        <a href="Productos/Producto1.php">
                             <button class = "btn1">
                                 Comprar
                             </button>
@@ -599,7 +599,7 @@
                         <h5>Jabones</h5>
                         <h2>Jabon Glicerina Canendula </h2>
                         <h3>$67.000</h3>
-                        <a href="Productos/Producto2.html">
+                        <a href="Productos/Producto2.php">
                             <button class = "btn1">
                                 Comprar
                             </button>
@@ -615,7 +615,7 @@
                         <h5>Cremas</h5>
                         <h2>Crema Facial </h2>
                         <h3>$16.500</h3>
-                        <a href="Productos/Producto3.html">
+                        <a href="Productos/Producto3.php">
                             <button class = "btn1">
                                 Comprar
                             </button>
@@ -631,7 +631,7 @@
                         <h5>Antibacterial</h5>
                         <h2>Gel Antibacterial E_E Art </h2>
                         <h3>$19.000</h3>
-                        <a href="Productos/Producto4.html">
+                        <a href="Productos/Producto4.php">
                             <button class = "btn1">
                                 Comprar
                             </button>
@@ -647,7 +647,7 @@
                         <h5>Jabones</h5>
                         <h2>Jabon Corporal E_E Art  </h2>
                         <h3>$7.500</h3>
-                        <a href="Productos/Producto5.html">
+                        <a href="Productos/Producto5.php">
                             <button class = "btn1">
                                 Comprar
                             </button>
@@ -663,7 +663,7 @@
                         <h5>Jabones</h5>
                         <h2>Jabon Glicerina </h2>
                         <h3>$47.000</h3>
-                        <a href="Productos/Producto6.html">
+                        <a href="Productos/Producto6.php">
                             <button class = "btn1">
                                 Comprar
                             </button>
@@ -679,7 +679,7 @@
                         <h5>Jabones</h5>
                         <h2>Jabon Corporal Maracuya  </h2>
                         <h3>$9.500</h3>
-                        <a href="Productos/Producto7.html">
+                        <a href="Productos/Producto7.php">
                             <button class = "btn1">
                                 Comprar
                             </button>
@@ -695,7 +695,7 @@
                         <h5>Jabones</h5>
                         <h2>Jabon Glicerina Cereza</h2>
                         <h3>$57.000</h3>
-                        <a href="Productos/Producto8.html">
+                        <a href="Productos/Producto8.php">
                             <button class = "btn1">
                                 Comprar
                             </button>
@@ -716,7 +716,7 @@
                         <h5>Cremas</h5>
                         <h2>Mascara De Carbon </h2>
                         <h3>$38.000</h3>
-                        <a href="Productos/Producto9.html">
+                        <a href="Productos/Producto9.php">
                             <button class = "btn1">
                                 Comprar
                             </button>
@@ -732,7 +732,7 @@
                         <h5>Jabones</h5>
                         <h2>Jabon Glicerina Mora</h2>
                         <h3>$57.000</h3>
-                        <a href="Productos/Producto10.html">
+                        <a href="Productos/Producto10.php">
                             <button class = "btn1">
                                 Comprar
                             </button>
@@ -758,11 +758,11 @@
         </div>
         <div class="box">
             <h2>SOBRE NOSOTROS</h2>
-            <li><a href="E_E.html">Inicio</a></li>
-            <li><a href="Catalogo.html">Catalogo</a></li>
+            <li><a href="E_E.php">Inicio</a></li>
+            <li><a href="Catalogo.php">Catalogo</a></li>
             <li><a href="">Servicios</a></li>
             <li><a href=""> Acerca de</a></li>
-            <li><a href="Contacto.html"> Contacto</a></li>
+            <li><a href="Contacto.php"> Contacto</a></li>
         </div>
         <div class="box">
             <h2>SOBRE NOSOTROS</h2>
