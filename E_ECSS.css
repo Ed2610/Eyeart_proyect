@@ -31,6 +31,13 @@ nav .logo a{
     font-weight: 500;
     padding: 0 50px;
 }
+
+.botonPHP{
+    width: 200px;
+    height: 50px;
+    
+}
+
 .buscador{
     list-style: none;
     display: flex;
