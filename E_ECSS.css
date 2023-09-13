@@ -319,7 +319,6 @@ nav .logo a{
 .cards1 {
     color: #07570eb0;
     width: 400px;
-    height: 730px;
     margin: 40px;
     border: 1px solid rgb(221, 221, 221);
     cursor: pointer;
@@ -456,6 +455,7 @@ nav .logo a{
     background-color: #07570eb0;
     text-align: center;
     transition: all 300ms ease;
+    border-radius: 25px;
 }
 .pie-pagina .grupo-1 .red-social a:hover{
     color: #07570eb0;
