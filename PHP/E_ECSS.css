@@ -173,6 +173,7 @@ nav .logo a{
     display: block;
     transition: 1.5s;
 }
+
 .slider{
 
     width: 100%;
@@ -448,6 +449,7 @@ nav .logo a{
     background-color: #07570eb0;
     text-align: center;
     transition: all 300ms ease;
+    border-radius: 25px;
 }
 .pie-pagina .grupo-1 .red-social a:hover{
     color: #07570eb0;

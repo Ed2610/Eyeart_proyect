@@ -61,16 +61,16 @@
     <!-- The slideshow/carousel -->
     <div class="carousel-inner">
     <div class="carousel-item active">
-    <img src="https://eyeart.com.co/wp-content/uploads/2020/12/EE-Art-tienda-eye-art-tienda-1.png" alt="Los Angeles" class="d-block" style="width:100%; height:900px">
+    <img src="https://i.ibb.co/N1fyz56/descarga-1.png" alt="Los Angeles" class="d-block" style="width:100%; height:900px">
     </div>
     <div class="carousel-item">
-    <img src="https://previews.123rf.com/images/veleri/veleri1907/veleri190700045/130927452-banner-horizontal-con-ilustraci%C3%B3n-de-ne%C3%B3n-de-jabones-hechos-a-mano-con-naranja-ramitas-de-enebro.jpg" alt="Chicago" class="d-block" style="width:100%; height:900px">
+    <img src="https://i.ibb.co/PWj3YDf/descarga-2.png" alt="Chicago" class="d-block" style="width:100%; height:900px">
     </div>
     <div class="carousel-item">
     <img src="https://saviajabones.co/sites/default/files/styles/cetiia-banner-1280_x_500/public/diapositivas/Banners%20Savia_Mesa%20de%20trabajo%201%20copia_0.png?itok=a9BVXv7Q" alt="New York" class="d-block" style="width:100%; height:900px">
     </div>
     <div class="carousel-item">
-    <img src="https://www.protex-soap.com/content/dam/cp-sites/personal-care/protex-relaunch/latam/hero/protex-proteccion-antibacterial-home.jpg" alt="New York" class="d-block" style="width:100%; height:900px">
+    <img src="https://i.ibb.co/6y1h3NJ/Captura-de-pantalla-2023-09-13-070340.png" alt="New York" class="d-block" style="width:100%; height:900px">
     </div>
     </div>
   
@@ -158,7 +158,7 @@
                 <div class="box">
                     <h2>SOBRE NOSOTROS</h2>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="inicio.php">">Catalogo</a></li>
+                    <li><a href="inicio.php">Catalogo</a></li>
                     <li><a href="inicio.php">Servicios</a></li>
                     <li><a href="inicio.php"> Acerca de</a></li>
                     <li><a href="inicio.php"> Contacto</a></li>
