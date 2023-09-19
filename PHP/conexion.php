@@ -4,9 +4,13 @@
    $password = '';
    $database = 'eye';
    try {
-     $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
-   } catch (PDOException $e) {
-     die('Connection Failed: ' . $e->getMessage());
-   }
-   
+    $con=new PDO('mysql:host=localhost;
+    dbname='.$database,$username,$password,
+      array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
+    );
+
+}catch (PDOException $e){
+echo "Error en la conexion a la base de datos".$e->getMessage();
+}
+
 ?>
