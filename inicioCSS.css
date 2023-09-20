@@ -39,6 +39,7 @@ body{
 }
 .formulario .titulo h1{
     margin: auto;
+    font-size: 30px;
 }
 
 .formulario .titulo a{
@@ -56,6 +57,7 @@ body{
 
 .formulario .titulo h5{
     margin: 10px auto;
+    font-size: 15px;
 }
 
 .imag{
@@ -65,9 +67,11 @@ body{
 }
 
 .formulario .inputs{
-    display: grid;
-    margin: 40px 30px;
-
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -82,6 +86,7 @@ body{
 
 .botones h5{
     margin: 40px 0;
+    font-size: 15px;
 }
 
 .botones a{
@@ -97,9 +102,9 @@ body{
 }
 .btn1{
     width: 50%;
-    margin-top: 20px;
-    color: #07570eb0;
-    background: #ffffffa6;
+    margin-top: 35px;
+    color: #fffffff7;
+    background: #07570eb0;
     height: 44px;
     border: 1px solid #07570eb0;
     border-radius: 7px;
@@ -111,39 +116,37 @@ body{
 }
 
 .btn1:hover{
-    background: #07570eb0;
-    color: white;
+    background: rgb(189, 189, 4);
+    color: #ffffff;
     transition: 0.5s;
+    border: 1px solid rgb(189, 189, 4);
 }
 
 .inputs select{
     margin-top: 20px;
     height: 40px;
+    width: 330px;
     border-radius: 8px;
     border: 1px solid gray;
-    padding: 10px;
+    color: gray;
+    padding: 5px;
     font-family: 'Poppins', sans-serif;
 }
 
 input[type="text" i] {
-    
     margin-top: 20px;
     height: 40px;
+    width: 330px;
     border-radius: 8px;
     border: 1px solid gray;
-    padding: 10px;
+    padding:10px;
     font-family: 'Poppins', sans-serif;
 }
 
-input :hover[type="text" i] {
-    color: rgb(189, 189, 4);
-}
-    
-
 input[type="password" i] {
-    
     margin-top: 20px;
     height: 40px;
+    width: 330px;
     border-radius: 8px;
     border: 1px solid gray;
     padding: 10px;

@@ -1,0 +1,470 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #ff0000;
+    width: 100%;
+}
+
+
+nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #07570eb0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    }
+nav .logo a{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 50px;
+}
+
+.iconos{
+    width: 150px;
+    margin: 0 0 0 50px;
+}
+.iconos .inicio{
+    width: 50px;
+    display: inline-flex;
+    height: 50px;
+    background: #e7e7e7;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.inicio a{
+    height: 100%;
+}
+
+.iconos .inicio:hover{
+
+    background: #bdbd04;
+    transition: 0.5s;
+    color: #fcfcfc;
+    
+}
+
+.inicio :hover i {
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+
+.iconos .fa-solid{
+    color:#000000;
+    font-size: 25px;
+    margin: 12px 14px;
+    width: 60px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.fa-door-open{
+    color:#000000;
+    font-size: 25px;
+    margin: 12px 12px;
+    width: 60px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.menu{
+    
+    list-style: none;
+    display: flex;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin: auto;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    display: block;
+    transition: all .3s;
+}
+.menu li{
+    display: block;
+    padding: 6px 14px;
+}
+
+.submenu2{
+    display: block;
+    padding: 6px 0;
+    border-block-end: 1px solid rgb(3, 122, 13);
+    transition: all .3s;
+}
+
+.submenu2:hover{
+  background-color: rgba(0, 94, 9, 0.493);
+  transition: all .3s;
+}
+
+
+.submenu3{
+    display: block;
+    padding: 6px 0;
+    border-block-end: 1px solid rgb(3, 122, 13);
+    transition: all .3s;
+}
+
+.submenu3:hover{
+  background-color: rgba(0, 94, 9, 0.493);
+  transition: all .3s;
+}
+.menu li a:hover{
+    color: #ffffff;
+    transition: all .3s;
+    border: none;
+}
+
+.submenu{
+    position: absolute;
+    display: none;
+    transition: 0.5s;
+}
+.submenu li{
+    background: #07570eb0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+
+
+}
+.submenu li a{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu li:hover .submenu{
+    display: block;
+    transition: 1.5s;
+}
+
+.contenedor{
+    width: 100%;
+    padding: 40px 12px;
+    display: flex;
+    justify-content: center;
+}
+.contenedor2{
+    margin: 0 20px;
+}
+
+.mini-contenedor{
+    width: 17%;
+    margin: 42px 0;
+}
+
+.titulo{
+    display: flex;
+}
+
+
+.titulo a{
+    color: black;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 30px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.titulo li{
+    width: 100%;
+    height: 100%;
+}
+
+.titulo h1{
+    font-size: 30px;
+    margin: 3px ;
+}
+
+
+
+.Contenedor-btn{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 40px 20px 0 0;
+}
+
+.Contenedor-btn .btn1{
+    height: 40px;
+    background-color: #ff5757;
+    padding: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 0 20px 0 0;
+    border: none;
+    border-radius: 3px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.Contenedor-btn .btn1:hover{
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.11);
+    transition: all .3s;
+    background-color: #fd7f7f ;
+    border-radius: 3px;
+
+}
+
+.Contenedor-btn .btn2{
+    background: skyblue;
+    padding: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 0 20px 0 0;
+    border: none;
+    height: 40px;
+    border-radius: 3px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.Contenedor-btn .btn2:hover{
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.11);
+    transition: all .3s;
+    background-color: rgba(135, 207, 235, 0.651) ;
+    border-radius: 3px;
+
+}
+
+.descargar-reporte{
+    text-decoration: none;
+}
+
+.offcanvas-body{
+    background: #07570eb0;
+}
+
+.offcanvas-header{
+    background: #07570eb0;
+}
+
+.offcanvas-title{
+    color: white;
+}
+
+.btn22{
+    font-weight: 500;
+    margin: 20px 20px;
+    font-size: 20px;
+    color: white;
+}
+
+
+.cardadd{
+    width: 100%;
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #d7d7d7;
+}
+
+.cardadd h4{
+    font-size: 18px;
+}
+.cardadd input{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #9f9f9f;
+    border-radius: 5px;
+    margin: 0 0 20px 0;
+}
+.cardadd textarea{
+    width: 100%;
+    border: 1px solid #9f9f9f;
+    border-radius: 5px;
+}
+
+.cardmulti{
+    width: 100%;
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px dashed #d7d7d7;
+    display: flex;
+    flex-direction: column;
+}
+
+.archivomul{
+    border-radius: 12px;
+    border: 1px dashed#4d4d4d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.cardprecio{
+    width: 100%;
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px dashed #d7d7d7;
+    display: flex;
+    flex-direction: column;
+}
+.tituloo1 h4{
+    font-size: 25px;
+    margin: 0 0 20px 0;
+}
+
+.precios{
+    border-block-end: 1px solid #c5c5c5;
+    display: flex;
+    padding-block-end: 40px;
+}
+
+.precios h4{
+    font-size: 18px;
+}
+.archivomul .fa-solid {
+    font-size: 80px;
+    margin: 30px;
+}
+
+.archivomul input {
+    width: auto;
+}
+
+.preciostotal{
+    margin: auto;
+}
+
+.precios input{
+    width: 275px;
+    margin: auto;
+}
+
+.precioun{
+    margin: 0 40px 0 0;
+}
+
+.precioun select{
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: .375rem .75rem;
+}
+
+.categorias{
+    margin: 30px 0 ;
+}
+
+.categorias select{
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: .375rem .75rem;
+}
+
+.categorias option{
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: .375rem .75rem;
+}
+
+.categorias h4{
+    font-size: 18px;
+}
+
+.cardactivo{
+    width: 100%;
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 40px 20px;
+    border-radius: 12px;
+    border: 1px dashed #d7d7d7;
+    display: flex;
+    flex-direction: column;
+}
+
+.activos{
+    border-block-end: 1px solid #c5c5c5;
+    display: flex;
+    padding-block-end: 40px;
+    width: 100%;
+}
+
+.activos input{
+    width: 275px;
+    margin: auto;
+}
+
+.activos1{
+    width: 100%;
+}
+
+.activos1 h4{
+    font-size: 18px;
+}
+
+.activos1 select{
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: 0.375rem 0.75rem;
+}
+
+
+
+.Tienda{
+    margin-top: 30px;
+}
+
+.Tienda select{
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: .375rem .75rem;
+}
+
+.Tienda option{
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: .375rem .75rem;
+}
+
+.Tienda h4{
+    font-size: 18px;
+}
+
+.Tienda input{
+    height: 20px;
+    width: 20px;
+}
+
+
+.checks{
+    display: flex;
+    align-items: center;
+}

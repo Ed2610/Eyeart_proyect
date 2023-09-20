@@ -86,7 +86,6 @@ nav .logo a{
     padding: 0;
     width: 100%;
     height: 100%;
-    max-width: fit-content;
     align-items: center;
     margin: auto;
 }
@@ -100,13 +99,37 @@ nav .logo a{
 }
 .menu li{
     display: block;
-    text-align: center;
     padding: 6px 14px;
 }
 
-.menu li a:hover{
-    color: #bdbd04;
+.submenu2{
+    display: block;
+    padding: 6px 0;
+    border-block-end: 1px solid rgb(3, 122, 13);
     transition: all .3s;
+}
+
+.submenu2:hover{
+  background-color: rgba(0, 94, 9, 0.493);
+  transition: all .3s;
+}
+
+
+.submenu3{
+    display: block;
+    padding: 6px 0;
+    border-block-end: 1px solid rgb(3, 122, 13);
+    transition: all .3s;
+}
+
+.submenu3:hover{
+  background-color: rgba(0, 94, 9, 0.493);
+  transition: all .3s;
+}
+.menu li a:hover{
+    color: #ffffff;
+    transition: all .3s;
+    border: none;
 }
 
 .submenu{
@@ -867,4 +890,23 @@ nav .logo a{
 
 .descargar-reporte{
     text-decoration: none;
+}
+
+.offcanvas-body{
+    background: #07570eb0;
+}
+
+.offcanvas-header{
+    background: #07570eb0;
+}
+
+.offcanvas-title{
+    color: white;
+}
+
+.btn22{
+    font-weight: 500;
+    margin: 20px 20px;
+    font-size: 20px;
+    color: white;
 }
