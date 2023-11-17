@@ -26,7 +26,7 @@ if (isset($_POST['registrar'])) {
             ':TipoDocumento' => $TipoDocumento,
             ':Ciudad' => (int)$ciudad,
         ));
-        header('Location: E_E.php');
+        header('Location: index.php');
     } else {
         echo "<script> alert('Algunos de los campos está vacío');</script>";
     }
@@ -37,7 +37,7 @@ if (isset($_POST['registrar'])) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>E_EArt</title>
+    <title>E&EArt</title>
     <link rel="stylesheet" href="inicioCSS.css">
     <link rel="icon" href="Imagenes/logo1.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -63,9 +63,9 @@ if (isset($_POST['registrar'])) {
         </div>
         <div class="inputs">
             <form method="post" action="">
-                <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
-                <input type="text" name="Apellido" id="Apellido" placeholder="Apellido">
-                <select name="TipoDocumento">
+                <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" required>
+                <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" required>
+                <select name="TipoDocumento" required>
                     <option value="1">Cedula de Ciudadania</option>
                     <option value="2">Tarjeta De Identidad</option>
                     <option value="3">Pasaporte</option>
@@ -73,14 +73,19 @@ if (isset($_POST['registrar'])) {
                     <option value="5">Pasaporte Extranjero</option>
                     <option value="6">Visa</option>
                 </select>
-                <input type="number" name="NumeroDocumento" id="NumeroDocumento" placeholder="Numero de documento">
-                <input type="text" name="Direccion" id="Direccion" placeholder="Direccion">
-                <input type="number" name="Telefono" id="Telefono" placeholder="Telefono">
-                <input type="email" name="Correo" id="Correo" placeholder="Correo" class="correo">
-                <input type="password" name="Contrasena" id="Contrasena" placeholder="Contraseña">
-                <select name="Ciudad_IdCiudad">
+                <input type="text" name="NumeroDocumento" id="NumeroDocumento" placeholder="Numero de documento" required>
+                <input type="text" name="Direccion" id="Direccion" placeholder="Direccion" required>
+                <input type="number" name="Telefono" id="Telefono" placeholder="Telefono" required>
+                <input type="email" name="Correo" id="Correo" placeholder="Correo" class="correo" required>
+                <input type="password" name="Contrasena" id="Contrasena" placeholder="Contraseña" required>
+                <select name="Ciudad_IdCiudad" required>
                     <option value="1">Bogota</option>
-                    <option value="2">Medellin</option>
+                    <option value="2">Medellín</option>
+                    <option value="3">Cali</option>
+                    <option value="4">Barranquilla</option>
+                    <option value="5">Cartagena</option>
+                    <option value="6">Soacha</option>
+                    <option value="7">Cúcuta</option>
                 </select>
         </div>
         <div class="botones">
@@ -125,7 +130,7 @@ if (isset($_POST['registrar'])) {
         </div>
     </div>
     <div class="grupo-2">
-        <small>_copy; 2023 <b>Papeleria la Universidad</b> - Todos los Derechos Reservados.</small>
+        <small>_copy; 2023 <b>EyeArt</b> - Todos los Derechos Reservados.</small>
     </div>
 </footer>
 </body>
