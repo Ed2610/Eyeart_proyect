@@ -61,7 +61,7 @@ session_start();
     </head>
     <body>
         <div class = "contenedor">
-        <div class = "formularos">
+        <div class = "formulario">
         <form method="$_POST" action="inicio.php">
             <div class="titulo">
                 <a href="E_E.php"><i class="fa-solid fa-arrow-left"></i> Volver</a>
@@ -76,8 +76,8 @@ session_start();
                     <option value="value1">Cliente</option>
                     <option value="value2" >Administrador</option>
                   </select>
-                <input name="usuario" type="text" id="usuario" placeholder = "Usuario">
-                <input name="contrasena" type="pasword"  id="contrasena" placeholder = "Contraseña">
+                <input name="usuario" type="text" id="usuario" placeholder = "Usuario" required>
+                <input name="contrasena" type="password"  id="contrasena" placeholder = "Contraseña" required>
             </div>
             <div class = "botones">
             <button class = "btn1"  onclick="cargar()" input type="submit">
