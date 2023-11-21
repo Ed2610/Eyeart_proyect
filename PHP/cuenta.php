@@ -1,3 +1,10 @@
+<?php
+session_start();
+$nnombre = $_SESSION['Nombre'];
+$ccorreo = $_SESSION['Correo'];
+$nndocu = $_SESSION['NumeroDocumento'];
+?>
+
 <html>
     <!DOCTYPE = "html">
     <head>
@@ -83,7 +90,7 @@
                     Nombre de usuario
                 </div>
                 <div class="datos">
-                    Camillo11
+                        <?php echo $nnombre ?>
                 </div>
             </div>
             <div class="contenido-datos">
@@ -91,7 +98,7 @@
                     Correo electronico
                 </div>
                     <div class="datos">
-                        Camillo2112@gmail.com
+                        <?php echo $ccorreo ?>
                     </div>
             </div>
             <div class="contenido-datos">
@@ -99,7 +106,7 @@
                     Tarjeta de identidad
                 </div>
                 <div class="datos">
-                        Camillo11
+                        <?php echo $nndocu?>
                 </div>
           </div>
         </div>
@@ -109,7 +116,7 @@
         <div class="cerrar-sesion">
             <h1>Cierra sesión</h1>
                  <h4>De esta manera, puedes cerrar tu sesión de tu cuenta en E_E Art en esta plataforma. </h4>
-            <a href="E_E.html">
+            <a href="cerrar_s.php">
             <button class="btn-cerrar" onclick="cerrar()">
                 Cerrar Sesion
             </button>

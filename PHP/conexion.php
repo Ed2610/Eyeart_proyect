@@ -12,5 +12,4 @@
 }catch (PDOException $e){
 echo "Error en la conexion a la base de datos".$e->getMessage();
 }
-
 ?>
