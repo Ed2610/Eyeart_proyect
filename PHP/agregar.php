@@ -257,18 +257,18 @@
         </div>
         <nav>
             <ul class="menu">
-                <li><a href="file:///C:/Users/user/Documents/E_E/E_E.html">Inicio</a></li>
-                <li><a href="file:///C:/Users/user/Documents/E_E/Catalogo.html">Productos</a>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="Catalogo.html">Productos</a>
                     <ul class = "submenu">
-                        <li><a href="file:///C:/Users/user/Documents/E_E/Catalogo.html">Cudernos</a></li>
-                        <li><a href="file:///C:/Users/user/Documents/E_E/Catalogo.html">Lapices</a></li>
+                        <li><a href="Catalogo.html">Cudernos</a></li>
+                        <li><a href="Catalogo.html">Lapices</a></li>
                     </ul>
                 <li><a href="">Servicios</a></li>
                 <li><a href="">Acerca De</a></li>
                 <li><a href="">Contacto</a></li>
                 <div class = "iconos">
                     <div class = "inicio">
-                        <a href ="file:///C:/Users/Aprendiz/Documents/E_E/E_E.html">
+                        <a href ="index.php">
                        <i class="fa-solid fa-door-open" onclick="cerrar()"></i>
                     </a>
                     </div>

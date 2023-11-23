@@ -46,7 +46,7 @@ if (isset($_POST['registrar'])) {
     <script>
         function valueregistro() {
             alert("Se ha registrado el usuario correctamente");
-            location.href = "E_E.php";
+            location.href = "index.php";
         }
     </script>
 </head>
@@ -54,7 +54,7 @@ if (isset($_POST['registrar'])) {
 <div class="contenedor">
     <div class="formulario">
         <div class="titulo">
-            <a href="E_E.php"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+            <a href="index.php"><i class="fa-solid fa-arrow-left"></i> Volver</a>
             <div class="imag">
                 <img src="Imagenes/logo1.png" alt="" height="200px">
             </div>
@@ -108,7 +108,7 @@ if (isset($_POST['registrar'])) {
         </div>
         <div class="box">
             <h2>SOBRE NOSOTROS</h2>
-            <li><a href="E_E.php">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="#">Catalogo</a></li>
             <li><a href="">Servicios</a></li>
             <li><a href=""> Acerca de</a></li>

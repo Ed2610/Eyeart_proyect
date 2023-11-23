@@ -413,7 +413,7 @@
                     </div>
                 </div>
                 <div class="boton-comprar">
-                    <a href="file:///C:/Users/Aprendiz/Documents/E_E/TipoPago.php">
+                    <a href="TipoPago.php">
                         <button class="btn-pedido" id="btn-pedido">
                             Confirmar Peido
                         </button>
@@ -425,7 +425,7 @@
 
         <nav>
         <ul class="menu">
-            <li><a href="E_E.php">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="Catalogo.php">Productos</a>
                 <ul class = "submenu">
                     <li><a href="Catalogo.php">Jabones</a></li>
@@ -458,7 +458,7 @@
                 </a>
                 </div>
                 <div class = "inicio">
-                    <a href ="E_E.php" onclick="cerrar()">
+                    <a href ="index.php" onclick="cerrar()">
                     <i class="fa-solid fa-door-open"></i>
                 </a>
                 </div>
@@ -472,7 +472,7 @@
         </div>
 
         <div class = "recorrido">
-            <a href="E_E.php">Home</a> > <h4>Producto</h4> 
+            <a href="index.php">Home</a> > <h4>Producto</h4> 
          </div>
 
     <div class = "catalogo">
@@ -758,7 +758,7 @@
         </div>
         <div class="box">
             <h2>SOBRE NOSOTROS</h2>
-            <li><a href="E_E.php">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="Catalogo.php">Catalogo</a></li>
             <li><a href="">Servicios</a></li>
             <li><a href=""> Acerca de</a></li>

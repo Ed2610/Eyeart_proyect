@@ -51,7 +51,7 @@ $nndocu = $_SESSION['NumeroDocumento'];
     <body>
         <nav>
         <ul class="menu">
-            <li><a href="E_E.html">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="Catalogo.html">Productos</a>
                 <ul class = "submenu">
                     <li><a href="Catalogo.html">Jabones</a></li>
@@ -228,7 +228,7 @@ $nndocu = $_SESSION['NumeroDocumento'];
             </div>
             <div class="box">
                 <h2>SOBRE NOSOTROS</h2>
-                <li><a href="E_E.html">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li><a href="Catalogo.html">Catalogo</a></li>
                 <li><a href="">Servicios</a></li>
                 <li><a href=""> Acerca de</a></li>

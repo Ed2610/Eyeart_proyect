@@ -112,8 +112,8 @@ function CompraRealizada() {
         </div>
         <div class="box">
             <h2>SOBRE NOSOTROS</h2>
-            <li><a href="file:///C:/Users/user/Documents/E_E/E_E.html">Inicio</a></li>
-            <li><a href="file:///C:/Users/user/Documents/E_E/Catalogo.html">Catalogo</a></li>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="Catalogo.html">Catalogo</a></li>
             <li><a href="">Servicios</a></li>
             <li><a href=""> Acerca de</a></li>
             <li><a href=""> Contacto</a></li>

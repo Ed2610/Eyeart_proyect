@@ -23,7 +23,7 @@
     <body>
         <nav>
             <ul class="menu">
-                <li><a href="E_E.html">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li><a href="Catalogo.html">Productos</a>
                     <ul class = "submenu">
                         <li><a href="Catalogo.html">Jabones</a></li>
@@ -41,7 +41,7 @@
 
 
         <div class = "recorrido">
-            <a href="E_E.html">Home</a> > <a href="Catalogo.html"> Categoria</a>  >    <h4>Producto</h4> 
+            <a href="index.php">Home</a> > <a href="Catalogo.html"> Categoria</a>  >    <h4>Producto</h4> 
          </div>
          <div class = "recorrido2">
             <h1>Carrito de Compras (3)</h1>
@@ -152,7 +152,7 @@
             </div>
             <div class="box">
                 <h2>SOBRE NOSOTROS</h2>
-                <li><a href="E_E.html">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li><a href="Catalogo.html">Catalogo</a></li>
                 <li><a href="">Servicios</a></li>
                 <li><a href=""> Acerca de</a></li>
