@@ -1,8 +1,107 @@
 <?php
 session_start();
+include_once('conexion.php');
+$id = $_SESSION['idUsuario'];
 $nnombre = $_SESSION['Nombre'];
 $ccorreo = $_SESSION['Correo'];
 $nndocu = $_SESSION['NumeroDocumento'];
+
+// Validaciones y UPDATE
+    if(!empty($_POST))
+    {
+        $alert="";
+        if (!empty($_POST['Nombre']) && !empty($_POST['Apellido']) && !empty($_POST['NumeroDocumento']) 
+        && !empty($_POST['Direccion']) && !empty($_POST['Telefono']) && !empty($_POST['Correo']) && !empty($_POST['TipoDocumento']) && !empty($_POST['Ciudad_IdCiudad'])) 
+        {
+            $nombre = $_POST['Nombre'];
+            $apellido = $_POST['Apellido'];
+            $numeroDocumento = $_POST['NumeroDocumento'];
+            $direccion = $_POST['Direccion'];
+            $telefono = $_POST['Telefono'];
+            $correo = $_POST['Correo'];
+            $TipoDocumento = $_POST['TipoDocumento'];
+            $ciudad = $_POST['Ciudad_IdCiudad'];
+
+            $validacion1 = $con->prepare('SELECT * FROM usuario WHERE (Correo = :Correo AND idUsuario != :id OR NumeroDocumento = :NumeroDocumento AND idUsuario != :id);');
+            $validacion1->bindParam(':Correo', $correo);
+            $validacion1->bindParam(':NumeroDocumento', $TipoDocumento);
+            $validacion1->bindParam(':id',$id);
+            $validacion1->execute();
+            $resultado_val = $validacion1->rowCount();
+
+            if($resultado_val > 0){
+                ?>
+                <script>alert("El correo o el numero de documento ya existen en la base de datos");</script>
+                <?php
+            }else{
+                $Sql_Actualilzar = $con->prepare('UPDATE usuario SET Nombre = :Nombre, Apellido = :Apellido, Correo = :Correo, NumeroDocumento = :NumeroDocumento, Direccion = :Direccion, Telefono = :Telefono, Correo = :Correo, TipoDocumento_IdTipoDocumento = :TipoDocumento, Ciudad_IdCiudad=:Ciudad WHERE idUsuario =:id');
+                $Sql_Actualilzar->execute(array(
+                ':id'=>$id,
+                ':Nombre'=>$nombre,
+                ':Apellido'=>$apellido,
+                ':Correo'=>$correo,
+                ':NumeroDocumento'=>(int)$numeroDocumento,
+                ':Direccion'=>$direccion,
+                ':Telefono'=>(int)$telefono,
+                ':TipoDocumento'=>$TipoDocumento,
+                ':Ciudad'=>(int)$ciudad,
+                ));
+
+                if($Sql_Actualilzar){
+                    ?>
+                    <script>
+                        alert("Se ha actualizado el usuario");
+                    </script> 
+                    <?php
+                    $result = $con->query("SELECT Nombre, Correo, NumeroDocumento FROM usuario WHERE idUsuario={$id}");
+                    $row = $result->fetch(PDO::FETCH_ASSOC);
+                    $_SESSION['Nombre'] = $row['Nombre']; 
+                    $_SESSION['Correo'] = $row['Correo'];
+                    $_SESSION['NumeroDocumento'] = $row['NumeroDocumento'];
+                    
+                    header("Location: cuenta.php");
+                    exit; 
+                }
+
+            }
+
+        }else{
+        ?>
+        <script>
+            alert("Los campos no deben de estar vacios");
+        </script>
+        <?php
+    }
+    }
+// Fin de Validaciones
+
+$Sql = "SELECT u.IdUsuario, u.Nombre, u.Apellido, u.NumeroDocumento, u.Direccion, u.Telefono, u.Correo, u.TipoDocumento_idTipoDocumento, u.Ciudad_idCiudad 
+        FROM usuario u 
+        WHERE idUsuario = :id";
+$estado = $con->prepare($Sql);
+$estado->execute([':id'=> $id]);
+$resultado = $estado->rowCount();
+
+if($resultado === 0){
+	?>
+<script>alert("Se ha encontrado un error en la base de datos")</script>
+<?php
+}else{
+
+while ($row = $estado->fetch(PDO::FETCH_ASSOC)) {
+
+    $idusuarioO = $row['IdUsuario'];
+    $nombreO = $row['Nombre'];
+    $apellidO = $row['Apellido'];
+    $numeroDO = $row['NumeroDocumento'];
+    $direccionO = $row['Direccion'];
+    $telfonoO = $row['Telefono'];
+    $correoO = $row['Correo'];
+    $tipodocu0 = $row['TipoDocumento_idTipoDocumento'];
+    $ciudadO = $row['Ciudad_idCiudad'];
+
+    }
+}
 ?>
 
 <html>
@@ -128,20 +227,36 @@ $nndocu = $_SESSION['NumeroDocumento'];
             <h3>Perfil</h3>
         <div class="contenido">
             <div class="contenido-editar">
-                <h4>Correo electronico</h4>
-                <input type="email" placeholder="Camilo2112@gmail.com">
-                <h4>Contraseña</h4>
-                <input type="password">
-                <div class="doc">
-                    <h4>Documento de Identidad</h4>
-                    <select name="select" class="tipoDoc">
-                        <option value="value1">Cedula de Ciudadania</option>
-                        <option value="value2" >Cedula Extranjera</option>
-                        <option value="value3">Visa</option>
-                        <option value="value4">Pasaporte</option>
-                      </select>
-                    <input type="text" class="numDoc" placeholder="1034779066">
-                  </div>
+            <form method="post" action="" class="formulario">
+                <input type="text" name="Nombre" id="Nombre" placeholder="<?php echo $nombreO?>" value="<?php echo $nombreO?>" required>
+                <input type="text" name="Apellido" id="Apellido" placeholder="<?php echo $apellidO?>" value="<?php echo $apellidO?>" required>
+                <select name="TipoDocumento" required>
+                    <option value="1" <?php if($tipodocu0== 1) echo 'selected';?>>Cedula de Ciudadania</option>
+                    <option value="2" <?php if($tipodocu0== 2) echo 'selected';?>>Tarjeta De Identidad</option>
+                    <option value="3" <?php if($tipodocu0== 3) echo 'selected';?>>Pasaporte</option>
+                    <option value="4" <?php if($tipodocu0== 4) echo 'selected';?>>Cedula de Extranjeria</option>
+                    <option value="5" <?php if($tipodocu0== 4) echo 'selected';?>>Pasaporte Extranjero</option>
+                    <option value="6" <?php if($tipodocu0== 5) echo 'selected';?>>Visa</option>
+                </select>
+                <input type="text" name="NumeroDocumento" id="NumeroDocumento" placeholder="<?php echo $numeroDO?>" value="<?php echo $numeroDO?>" required>
+                <input type="text" name="Direccion" id="Direccion" placeholder="<?php echo $direccionO?>" value="<?php echo $direccionO?>" required>
+                <input type="number" name="Telefono" id="Telefono" placeholder="<?php echo $telfonoO?>" value="<?php echo $telfonoO?>" required>
+                <input type="email" name="Correo" id="Correo" placeholder="<?php echo $nombreO?>" class="correo" value="<?php echo $correoO?>" required>
+                <select name="Ciudad_IdCiudad" required>
+                    <option value="1" <?php if($ciudadO== 1) echo 'selected'; ?>>Bogota</option>
+                    <option value="2" <?php if($ciudadO== 2) echo 'selected'; ?>>Medellín</option>
+                    <option value="3" <?php if($ciudadO== 3) echo 'selected'; ?>>Cali</option>
+                    <option value="4" <?php if($ciudadO== 4) echo 'selected'; ?>>Barranquilla</option>
+                    <option value="5" <?php if($ciudadO== 5) echo 'selected'; ?>>Cartagena</option>
+                    <option value="6" <?php if($ciudadO== 6) echo 'selected'; ?>>Soacha</option>
+                    <option value="7" <?php if($ciudadO== 7) echo 'selected'; ?>>Cúcuta</option>
+                </select>
+        </div>
+        <div class="botones">
+            <button class="btn1" type="submit" name="registrar" id="registrar">
+                Actualizar
+            </button>
+            </form>
                 <h4>Sexo</h4>
                 <select name="select">
                     <option value="value1">Masculino</option>

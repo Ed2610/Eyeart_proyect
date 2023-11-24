@@ -13,6 +13,20 @@ if (isset($_POST['registrar'])) {
     $TipoDocumento = $_POST['TipoDocumento'];
     $ciudad = $_POST['Ciudad_IdCiudad'];
 
+    $validacion1 = $con->prepare('SELECT * FROM usuario WHERE Correo = :Correo OR NumeroDocumento = :NumeroDocumento');
+
+    $validacion1->bindParam(':Correo', $correo);
+    $validacion1->bindParam(':NumeroDocumento', $TipoDocumento);
+
+    $validacion1->execute();
+
+    $resultado_val = $validacion1->rowCount();
+
+    if($resultado_val > 0){
+        ?>
+        <script>alert("El correo o el numero de documento ya existe, prueba con otro");</script>
+        <?php
+    }else{ 
     if (!empty($nombre) && !empty($apellido) && !empty($numeroDocumento) && !empty($telefono) && !empty($correo) && !empty($contrasena) && !empty($TipoDocumento) && !empty($ciudad)) {
         $consulta_agregar = $con->prepare('INSERT INTO usuario (Nombre, Apellido, NumeroDocumento, Direccion, Telefono, Correo, Contrasena, TipoDocumento_IdTipoDocumento, Ciudad_IdCiudad) VALUES (:Nombre, :Apellido, :NumeroDocumento, :Direccion, :Telefono, :Correo, :Contrasena, :TipoDocumento, :Ciudad)');
         $consulta_agregar->execute(array(
@@ -30,6 +44,7 @@ if (isset($_POST['registrar'])) {
     } else {
         echo "<script> alert('Algunos de los campos está vacío');</script>";
     }
+}
 }
 ?>
 

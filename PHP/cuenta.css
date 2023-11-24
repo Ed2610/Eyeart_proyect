@@ -348,19 +348,39 @@ nav .logo a{
 }
 
 .contenido-editar input{
-   height: 35px;
+   height: 30px;
    margin-block-end: 20px ;
    padding: 10px;
+   width: 180px;
+   border-radius: 24px;
 }
 
 .contenido-editar select{
-    height: 35px;
-    margin-block-end: 20px ;
+   height: 30px;
+   margin-block-end: 20px ;
+   padding: 10px;
+   width: 180px;
+   border-radius: 24px;
+}
+
+.contenido-editar select{
+   height: 30px;
+   margin-block-end: 20px ;
+   padding: 10px;
+   width: 180px;
+   border-radius: 24px;
  }
 
 
+.formulario{
+    display: inline-flex;
+}
 
-
+.formulario input{
+    width: 250px;
+    height: 30px;
+    border-radius: 24px;
+}
 
 
 
