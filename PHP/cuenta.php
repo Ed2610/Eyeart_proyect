@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['idUsuario'])) {
+    header("Location: inicio.php");
+    exit();
+}
+
 include_once('conexion.php');
 $id = $_SESSION['idUsuario'];
 $nnombre = $_SESSION['Nombre'];
@@ -252,11 +258,6 @@ while ($row = $estado->fetch(PDO::FETCH_ASSOC)) {
                     <option value="7" <?php if($ciudadO== 7) echo 'selected'; ?>>Cúcuta</option>
                 </select>
         </div>
-        <div class="botones">
-            <button class="btn1" type="submit" name="registrar" id="registrar">
-                Actualizar
-            </button>
-            </form>
                 <h4>Sexo</h4>
                 <select name="select">
                     <option value="value1">Masculino</option>
@@ -293,7 +294,6 @@ while ($row = $estado->fetch(PDO::FETCH_ASSOC)) {
                     <option value="value5">Cali</option>
                     <option value="value6">Cartagena</option>
                   </select>
-        </div>
         <div class="checkon">
             <input type="checkbox" class = "check"/>
             <label for="">Compartir mis datos de registro con los proveedores de E_E Art</label><br>
@@ -301,9 +301,10 @@ while ($row = $estado->fetch(PDO::FETCH_ASSOC)) {
             <button class="btn-cerrar" onclick="general()">
                 Cancelar
             </button>
-             <button class="btn-editar" onclick="guardar()">
-                Guardar Perfil
+             <button class="btn-editar" onclick="guardar()" type="submit" name="Actualizar" id="Actualizar">
+                Actualizar Perfil
             </button>
+            </form>
         
         </div>
       </div>
