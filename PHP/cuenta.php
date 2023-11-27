@@ -108,7 +108,37 @@ while ($row = $estado->fetch(PDO::FETCH_ASSOC)) {
 
     }
 }
+
+/*Eliminar usuario*/
+if(isset($_POST['btn-delete'])){
+    $Sql_Consulta_E = $con -> prepare('SELECT * FROM usuario WHERE idUsuario = :id');
+    $Sql_Consulta_E -> execute(array(
+        ':id'=>$id,
+    ));
+
+    $resultado_E = $Sql_Consulta_E->rowCount();
+
+    if($resultado_E === 0){
+        ?>
+        <script>alert("Se ha encontrado un error")</script>
+        <?php
+    }else{
+
+        $Sql_Eliminar = $con -> prepare('DELETE FROM usuario WHERE idUsuario = :id');
+        $Sql_Eliminar->execute(array(
+            'id'=> $id,
+        ));
+        ?>
+        <script>alert("Se ha eliminado su cuenta correctamente")</script>
+        <?php
+        include('cerrar_s.php');
+    }
+}
+/*Fin de eliminar*/
 ?>
+
+
+    
 
 <html>
     <!DOCTYPE = "html">
@@ -218,6 +248,11 @@ while ($row = $estado->fetch(PDO::FETCH_ASSOC)) {
             <button class="btn-editar" onclick="editar()">
                 Editar Perfil
             </button>
+            <form method="POST">
+            <button class="btn-delete" name="btn-delete">
+                Eliminar Cuenta
+            </button>
+            </form>
         <div class="cerrar-sesion">
             <h1>Cierra sesión</h1>
                  <h4>De esta manera, puedes cerrar tu sesión de tu cuenta en E_E Art en esta plataforma. </h4>
@@ -285,15 +320,6 @@ while ($row = $estado->fetch(PDO::FETCH_ASSOC)) {
                       </select>
                     <input type="text" placeholder="1990" class="ano">
                   </div>
-                  <h4>Ciudad</h4>
-                  <select name="select">
-                    <option value="value1">Ciudad</option>
-                    <option value="value2" >Bogota</option>
-                    <option value="value3">Medellin</option>
-                    <option value="value4">Barranquilla</option>
-                    <option value="value5">Cali</option>
-                    <option value="value6">Cartagena</option>
-                  </select>
         <div class="checkon">
             <input type="checkbox" class = "check"/>
             <label for="">Compartir mis datos de registro con los proveedores de E_E Art</label><br>

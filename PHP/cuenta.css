@@ -231,6 +231,26 @@ nav .logo a{
     transition: all .3s;
 }
 
+.btn-delete{
+    background: #C70039;
+    color: white;
+    height: 40px;
+    width: 120px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.btn-delete:hover{
+    background: #FF6969;
+    color: white;
+    cursor: pointer;
+    transition: all .3s;
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.2);
+}
+
 .btn-editar:hover{
     background: #bdbd04;
     color: white;
