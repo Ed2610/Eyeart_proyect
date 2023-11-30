@@ -40,6 +40,7 @@ if (isset($_POST['registrar'])) {
             ':TipoDocumento' => $TipoDocumento,
             ':Ciudad' => (int)$ciudad,
         ));
+        echo "Los datos se guardaron correctamente.";
         header('Location: index.php');
     } else {
         echo "<script> alert('Algunos de los campos está vacío');</script>";
@@ -78,30 +79,40 @@ if (isset($_POST['registrar'])) {
         </div>
         <div class="inputs">
             <form method="post" action="">
-                <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" required>
-                <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" required>
-                <select name="TipoDocumento" required>
-                    <option value="1">Cedula de Ciudadania</option>
-                    <option value="2">Tarjeta De Identidad</option>
-                    <option value="3">Pasaporte</option>
-                    <option value="4">Cedula de Extranjeria</option>
-                    <option value="5">Pasaporte Extranjero</option>
-                    <option value="6">Visa</option>
-                </select>
-                <input type="text" name="NumeroDocumento" id="NumeroDocumento" placeholder="Numero de documento" required>
-                <input type="text" name="Direccion" id="Direccion" placeholder="Direccion" required>
-                <input type="number" name="Telefono" id="Telefono" placeholder="Telefono" required>
-                <input type="email" name="Correo" id="Correo" placeholder="Correo" class="correo" required>
-                <input type="password" name="Contrasena" id="Contrasena" placeholder="Contraseña" required>
-                <select name="Ciudad_IdCiudad" required>
-                    <option value="1">Bogota</option>
-                    <option value="2">Medellín</option>
-                    <option value="3">Cali</option>
-                    <option value="4">Barranquilla</option>
-                    <option value="5">Cartagena</option>
-                    <option value="6">Soacha</option>
-                    <option value="7">Cúcuta</option>
-                </select>
+                <div class = "contenedor-inputs">
+                    <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" required>
+                    <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" required>
+                </div>
+                <div class = "contenedor-inputs">
+                    <select name="TipoDocumento" required>
+                        <option value="1">Cedula de Ciudadania</option>
+                        <option value="2">Tarjeta De Identidad</option>
+                        <option value="3">Pasaporte</option>
+                        <option value="4">Cedula de Extranjeria</option>
+                        <option value="5">Pasaporte Extranjero</option>
+                        <option value="6">Visa</option>
+                    </select>
+                    <input type="text" name="NumeroDocumento" id="NumeroDocumento" placeholder="Numero de documento" required>
+                </div>
+                <div class = "contenedor-inputs">
+                    <input type="text" name="Direccion" id="Direccion" placeholder="Direccion" required>
+                    <input type="number" name="Telefono" id="Telefono" placeholder="Telefono" required>
+                </div>
+                <div class = "contenedor-inputs">
+                    <input type="email" name="Correo" id="Correo" placeholder="Correo" class="correo" required>
+                    <input type="password" name="Contrasena" id="Contrasena" placeholder="Contraseña" required>
+                </div>
+                <div class = "contenedor-inputs">
+                    <select name="Ciudad_IdCiudad" required>
+                        <option value="1">Bogota</option>
+                        <option value="2">Medellín</option>
+                        <option value="3">Cali</option>
+                        <option value="4">Barranquilla</option>
+                        <option value="5">Cartagena</option>
+                        <option value="6">Soacha</option>
+                        <option value="7">Cúcuta</option>
+                    </select>
+                </div>
         </div>
         <div class="botones">
             <button class="btn1" type="submit" name="registrar" id="registrar">
