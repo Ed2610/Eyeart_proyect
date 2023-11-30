@@ -80,16 +80,17 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 20px;
 }
 
 .inputs input{
-width: 350px;
+width: 260px;
 height: 50px;
 outline-color: #07570eb0;
 }
 
 .inputs select{
-    width: 350px;
+    width: 260px;
     height: 50px;
 }
 
@@ -157,7 +158,6 @@ select{
 }
 
 .correo{
-    margin: 10px;
     height: 40px;
     border-radius: 8px;
     border: 1px solid gray;
