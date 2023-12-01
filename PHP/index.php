@@ -30,7 +30,7 @@ session_start();
                     </a>
                     </div>
                     <div class = "inicio">
-                        <a href ="cerrar_s.php">
+                        <a href ="registro.php">
                         <i class="fa-solid fa-door-open"></i>
                     </a>
                     </div>
