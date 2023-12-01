@@ -70,7 +70,7 @@ if (isset($_POST['iniciar'])) {
 <head>
     <meta charset="UTF-8">
     <title>E_EArt</title>
-    <link rel="stylesheet" href="inicioCSS.css">
+    <link rel="stylesheet" href="CSS/inicioCSS.css">
     <link rel="icon" href="Imagenes/logo1.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -84,7 +84,7 @@ if (isset($_POST['iniciar'])) {
         }
     </script>
 </head>
-<body>
+<body style = "background:#bdbd0415">
 <div class="contenedor">
     <div class="formulario">
         <form method="POST" action="">
@@ -94,7 +94,7 @@ if (isset($_POST['iniciar'])) {
                     <img src="Imagenes/logo1.png" alt="" height="200px">
                 </div>
                 <h1>INICIO SESION</h1>
-                <h5>¿Todavía no tienes una cuenta?<a href="registro.php"> REGISTRARSE</a></h5>
+                <h5>¿Todavía no tienes una cuenta?<a href="registro.php"> registrarse</a></h5>
             </div>
             <div class="inputs">
                 <input name="Correo" type="text" id="Correo" placeholder="Correo" required>
@@ -105,7 +105,7 @@ if (isset($_POST['iniciar'])) {
                     <div id="aa">Iniciar Sesion</div>
                     <div class="spinner-border" id="car" style="display:none"></div>
                 </button>
-                <a href="contraseña.php"><h5>¿HAS OLVIDADO TU CONTRASEÑA?</h5></a>
+                <a href="contraseña.php"><h5>¿has olvidado tu contraseña?</h5></a>
             </div>
         </form>
     </div>
