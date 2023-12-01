@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Papeleria La Universidad</title>
-        <link rel ="stylesheet" href="inicioCSS.css">
+        <link rel ="stylesheet" href="CSS/inicioCSS.css">
         <link rel="icon" href="Captura_de_pantalla_2023-06-05_162930-removebg-preview.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
@@ -11,7 +11,7 @@
         <div class = "contenedor">
         <div class = "formulario">
             <div class = "titulo">
-                <a href="inicio.html"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+                <a href="inicio.php"><i class="fa-solid fa-arrow-left"></i> Volver</a>
                 <div class = "imag">
                 <img src="Imagenes/logo1.png" alt="" height = "200px">     
                 </div>
