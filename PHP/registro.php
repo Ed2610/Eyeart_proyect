@@ -54,7 +54,7 @@ if (isset($_POST['registrar'])) {
 <head>
     <meta charset="UTF-8">
     <title>E&EArt</title>
-    <link rel="stylesheet" href="inicioCSS.css">
+    <link rel="stylesheet" href="CSS/RegistroCss.css">
     <link rel="icon" href="Imagenes/logo1.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -103,7 +103,7 @@ if (isset($_POST['registrar'])) {
                     <input type="password" name="Contrasena" id="Contrasena" placeholder="Contraseña" required>
                 </div>
                 <div class = "contenedor-inputs">
-                    <select name="Ciudad_IdCiudad" required>
+                    <select class = "ciudades" name="Ciudad_IdCiudad" required>
                         <option value="1">Bogota</option>
                         <option value="2">Medellín</option>
                         <option value="3">Cali</option>
