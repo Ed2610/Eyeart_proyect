@@ -13,69 +13,47 @@
    </script>
     </head>
     <body>
-        <nav>
-            <ul class="buscador">   
-                <div class="logo">
-                    <a href="index.php">
-                        <img src="Imagenes/logo2.png" alt="">                        
-                    </a>
-                </div>
-                <li>
-                 
-                </li>
-                <div class = "iconos">
-                    <div class = "inicio">
-                        <a href ="inicio.html">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                    </div>
-                    <div class = "inicio">
-                        <a href ="registro.html">
-                        <i class="fa-solid fa-door-open"></i>
-                    </a>
-                    </div>
-                </div>
-            </ul>
-        </nav>
-        <div class="regreso">
-            <a href="Catalogo.html"><img src="https://cdn-icons-png.flaticon.com/512/2722/2722837.png"width="50px" height="50px"alt=""/></a>
-        </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="Catalogo.php">Productos</a>
+                <ul class = "submenu">
+                    <li><a href="Catalogo.php">Jabones</a></li>
+                    <li><a href="Catalogo.php">Antibacterial</a></li>
+                    <li><a href="Catalogo.php">Velas</a></li>
+                    <li><a href="Catalogo.php">Cremas</a></li>
+                    <li><a href="Catalogo.php">Belleza</a></li>
+                </ul>
+            <li><a href="">Servicios</a></li>
+            <li><a href="">Acerca De</a></li>
+            <li><a href="Contacto.php">Contacto</a></li>
+            
+        </ul>
+    </li>
+    </nav>
+
     <div class="contenedor-contacto">
     <div class = "contacto">
-            <center><img src="imagenes/logo1.png" width="200"height="200"alt=""/></center>
-        
-        <div class="formulario">
-            <center ><h1>Contáctate Con Nosotros</h1></center>
+    <div class="titulo">
+                <a href="index.php"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+                <div class="imag">
+                    <img src="Imagenes/logo1.png" alt="" height="200px">
+                </div>
+                    <h1>CONTACTO</h1>
+                </div>
+        <div>
+        <div class="inputs">
+            <div class = "grupo-input">
+            <input type="text" placeholder="Nombres">
+            <input type="number"placeholder="Telefono">
+            </div>
+            <input type="email"placeholder="E-mail" class = "largos-input">
+            <textarea name="comentarios" rows="10" cols="30">Escribe aquí tus comentarios</textarea>
+                <button class="btn-contacto" onclick="enviar()">
+                    Enviar
+                </button>
         </div>
-        
-        <div class="formulario">
-            <center><h4>Ingresa tu Nombre*</h4></center>
         </div>
-        <div class="formulario">
-            <center ><input type="text" placeholder="Nombres"></center>
-        </div>
-        <div class="formulario">
-            <center><h4>Ingresa un numero de contacto*</h4></center>
-        </div>
-        <div class="formulario">
-            <center><input type="number"placeholder="Telefono"></center>
-        </div>
-        <div class="formulario">
-            <center><h4>Ingrese correo electronico*</h4></center>
-        </div>
-        <div class="formulario">
-            <center><input type="email"placeholder="E-mail"></center>
-        </div>
-        <div class="formulario">
-            <center><h4>Escriba comentarios o sugerencias*</h4></center>
-        </div>
-        <div class="formulario">
-            <center><input type="text"placeholder="Comentarios..."></center>
-        </div>
-            <br>
-            <center><button class="btn-contacto" onclick="enviar()">
-                Enviar
-            </button></center>
     </div>
 </div>
     <footer class="pie-pagina">
@@ -113,7 +91,7 @@
         <div class="grupo-2">
             <small>_copy; 2023 <b>E_E Art</b> - Todos los Derechos Reservados.</small>
         </div>
-    </footer>    
+</footer>    
     </body>
         
     
