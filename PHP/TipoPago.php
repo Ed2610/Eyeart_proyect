@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Tipos De Pagos</title>
-  <link rel="stylesheet" href="StyleTipoPago.css">
+  <link rel="stylesheet" href="CSS/StyleTipoPago.css">
   <link rel="icon" href="Imagenes/logo1.png" type="image/x-icon">
 
 </head>
