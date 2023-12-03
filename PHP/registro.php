@@ -54,7 +54,7 @@ if (isset($_POST['registrar'])) {
 <head>
     <meta charset="UTF-8">
     <title>E&EArt</title>
-    <link rel="stylesheet" href="CSS/RegistroCss.css">
+    <link rel="stylesheet" href="CSS/registroCss.css">
     <link rel="icon" href="Imagenes/logo1.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -115,7 +115,7 @@ if (isset($_POST['registrar'])) {
                 </div>
         </div>
         <div class="botones">
-            <button class="btn1" type="submit" name="registrar" id="registrar">
+            <button class="btn1" type="submit" name="registrar" id="registrar" onclick="valueregistro()">
                 Registrar
             </button>
             </form>

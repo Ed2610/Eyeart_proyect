@@ -66,7 +66,7 @@ $nndocu = $_SESSION['NumeroDocumento'];
                     $_SESSION['NumeroDocumento'] = $row['NumeroDocumento'];
                     
                     header("Location: cuenta.php");
-                    exit; 
+                    exit(); 
                 }
 
             }
@@ -143,11 +143,16 @@ if(isset($_POST['btn-delete'])){
 <html>
     <!DOCTYPE = "html">
     <head>
-        <link rel="stylesheet" href="cuenta.css">
+        <link rel="stylesheet" href="CSS/cuenta.css">
         <title>E_E Art</title>
         <link rel="icon" href="Imagenes/logo1.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script>
+
+            function alertEliminar() {
+                alert("Se ha eliminado el usuario correctamente");
+            }
+
             function cerrar() {
                 alert("Se ha cerrado la sesion Correctamente");
             }
@@ -187,13 +192,13 @@ if(isset($_POST['btn-delete'])){
         <nav>
         <ul class="menu">
             <li><a href="index.php">Inicio</a></li>
-            <li><a href="Catalogo.html">Productos</a>
+            <li><a href="Catalogo.php">Productos</a>
                 <ul class = "submenu">
-                    <li><a href="Catalogo.html">Jabones</a></li>
-                    <li><a href="Catalogo.html">Antibacterial</a></li>
-                    <li><a href="Catalogo.html">Velas</a></li>
-                    <li><a href="Catalogo.html">Cremas</a></li>
-                    <li><a href="Catalogo.html">Belleza</a></li>
+                    <li><a href="Catalogo.php">Jabones</a></li>
+                    <li><a href="Catalogo.php">Antibacterial</a></li>
+                    <li><a href="Catalogo.php">Velas</a></li>
+                    <li><a href="Catalogo.php">Cremas</a></li>
+                    <li><a href="Catalogo.php">Belleza</a></li>
                 </ul>
             <li><a href="">Servicios</a></li>
             <li><a href="">Acerca De</a></li>
@@ -249,7 +254,7 @@ if(isset($_POST['btn-delete'])){
                 Editar Perfil
             </button>
             <form method="POST">
-            <button class="btn-delete" name="btn-delete">
+            <button class="btn-delete" name="btn-delete" onclick="alertEliminar()">
                 Eliminar Cuenta
             </button>
             </form>
@@ -293,33 +298,6 @@ if(isset($_POST['btn-delete'])){
                     <option value="7" <?php if($ciudadO== 7) echo 'selected'; ?>>Cúcuta</option>
                 </select>
         </div>
-                <h4>Sexo</h4>
-                <select name="select">
-                    <option value="value1">Masculino</option>
-                    <option value="value2" >Femenino</option>
-                    <option value="value3">Prefiero no decirlo</option>
-                    <option value="value3">no binario</option>
-                    <option value="value3">Otro</option>
-                  </select>
-                  <div class="fecha">
-                    <h4>Fecha de Nacimiento</h4>
-                    <input type="text" placeholder="11" class="dia">
-                    <select name="select" class="mes">
-                        <option value="value1">Enero</option>
-                        <option value="value2" >Febrero</option>
-                        <option value="value3">Marzo</option>
-                        <option value="value4">Abril</option>
-                        <option value="value5">Mayo</option>
-                        <option value="value5">Junio</option>
-                        <option value="value5">Julio</option>
-                        <option value="value5">Agosto</option>
-                        <option value="value5">Septiembre</option>
-                        <option value="value5">Octubre</option>
-                        <option value="value5">Noviembre</option>
-                        <option value="value5">Diciembre</option>
-                      </select>
-                    <input type="text" placeholder="1990" class="ano">
-                  </div>
         <div class="checkon">
             <input type="checkbox" class = "check"/>
             <label for="">Compartir mis datos de registro con los proveedores de E_E Art</label><br>
@@ -371,7 +349,7 @@ if(isset($_POST['btn-delete'])){
             <div class="box">
                 <h2>SOBRE NOSOTROS</h2>
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="Catalogo.html">Catalogo</a></li>
+                <li><a href="Catalogo.php">Catalogo</a></li>
                 <li><a href="">Servicios</a></li>
                 <li><a href=""> Acerca de</a></li>
                 <li><a href=""> Contacto</a></li>
