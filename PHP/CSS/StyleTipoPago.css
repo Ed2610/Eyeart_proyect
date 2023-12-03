@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -9,20 +10,38 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background:#bdbd0415;
+}
+ .title a{
+    text-decoration: none;
+    color: #07570eb0;
+    transition: 0.5s;
+    font-size: 18px;    
+}
+
+.title a:hover{
+    text-decoration: none;
+    color: rgb(189, 189, 4);
+    transition: 0.5s;
+}
+
+h4{
+    margin: 20px 0;
 }
 
 .container{
-    width: 400px;
+    width: 500px;
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
                 0 5px 12px -2px rgba(0, 0, 0, 0.1),
                 0 18px 36px -6px rgba(0, 0, 0, 0.1);
+                background: white;
 }
 
 .container .title{
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    background: white;
 }
 
 .container form input{
@@ -32,30 +51,34 @@ body{
 .container form .category{
     margin-top: 10px;
     padding-top: 20px;
-
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .category label{
-    /* width: 100%; */
-    /* height: 65px; */
-    height: 145px;
+   
+    height: 170px;
     padding: 20px;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
     display: flex;
-    /* justify-content: space-between; */
     justify-content: center;
     align-items: center;
     cursor: pointer;
     border-radius: 5px;
     position: relative;
+    transition: 0.5s;
+    background: white;
+
 }
 
-/* label:nth-child(2), label:nth-child(3){
-    margin: 15px 0;
-} */
+.category label:hover{
+    box-shadow: 0px -1px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    border: 1px solid #07570e;
+    transition: 0.5s;
+}
+
 
 
 #visa:checked ~ .category .visaMethod,
@@ -93,6 +116,8 @@ label .imgName{
     top: 72%;
     transform: translateY(-72%);
 }
+
+
 
 .imgName .imgContainer{
     width: 50px;
