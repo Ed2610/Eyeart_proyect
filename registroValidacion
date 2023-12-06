@@ -1,0 +1,197 @@
+<?php
+include_once 'conexion.php';
+
+if (isset($_POST['registrar'])) {
+
+    $nombre = $_POST['Nombre'];
+    $apellido = $_POST['Apellido'];
+    $numeroDocumento = $_POST['NumeroDocumento'];
+    $direccion = $_POST['Direccion'];
+    $telefono = $_POST['Telefono'];
+    $correo = $_POST['Correo'];
+    $contrasena = $_POST['Contrasena'];
+    $TipoDocumento = $_POST['TipoDocumento'];
+    $ciudad = $_POST['Ciudad_IdCiudad'];}
+?>
+<script>
+//Declaramos constantes
+const form = document.getElementById('form');
+const name = document.getElementById('nombre');
+const email = document.getElementById('correo');
+const password = document.getElementById('contrasena');
+
+//Reconoce los inputs, osea que si estan conectados con el js
+console.log(form, name, email, password);
+
+//El evento
+form.addEventListener("submit", e=>{
+	checkInputs();
+});
+
+//Metodo que valide informacion
+function checkInputs() {
+	// Espacios en blanco
+	const nameValue = name.value.trim();
+	const emailValue = email.value.trim();
+	const passwordValue = password.value.trim();
+	
+	if(nameValue === '') {
+		setErrorFor(name, 'No puede dejar el usuario en blanco.');
+	} else {
+		setSuccessFor(name);
+	}
+	
+	if(emailValue === '') {
+		setErrorFor(email, 'No puede dejar el email en blanco');
+	} else if (!isEmail(emailValue)) {
+		setErrorFor(email, 'No ingreso un email válido');
+	} else {
+		setSuccessFor(email);
+	}
+	
+	if(passwordValue === '') {
+		setErrorFor(password, 'Contraseña no debe ingresar en blanco.');
+	} else {
+		setSuccessFor(password);
+	}
+}
+
+function setErrorFor(input, message) {
+	const form = input.parentElement;
+	const small = form.querySelector('small');
+	form.className = 'form';
+	small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const form = input.parentElement;
+	form.className = 'form success';
+}
+
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>E&EArt</title>
+    <link rel="stylesheet" href="CSS/RegistroCss.css">
+    <link rel="icon" href="Imagenes/logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script>
+        function valueregistro() {
+            alert("Se ha registrado el usuario correctamente");
+            location.href = "index.php";
+        }
+    </script>
+
+</head>
+<body>
+<div class="contenedor">
+    <div class="formulario">
+        <div class="titulo">
+            <a href="index.php"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+            <div class="imag">
+                <img src="Imagenes/logo1.png" alt="" height="200px">
+            </div>
+            <h1>REGISTRO</h1>
+            <h5>¿Tienes una cuenta?<a href="inicio.php"> INICIAR SESION</a></h5>
+        </div>
+        <div class="inputs">
+            <form id="form" class="contenedor" method="post" action="">
+                <div class="contenedor-inputs">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                    <input type="text" name="Apellido" id="Apellido" placeholder="Apellido">
+                </div>
+                <div class = "contenedor-inputs">
+                    <select name="TipoDocumento" required>
+                        <option value="1">Cedula de Ciudadania</option>
+                        <option value="2">Tarjeta De Identidad</option>
+                        <option value="3">Pasaporte</option>
+                        <option value="4">Cedula de Extranjeria</option>
+                        <option value="5">Pasaporte Extranjero</option>
+                        <option value="6">Visa</option>
+                    </select>
+                    <input type="text" name="NumeroDocumento" id="NumeroDocumento" placeholder="Numero de documento">
+                </div>
+                <div class = "contenedor-inputs">
+                    <input type="text" name="Direccion" id="Direccion" placeholder="Direccion">
+                    <input type="number" name="Telefono" id="Telefono" placeholder="Telefono">
+                </div>
+                <div class = "contenedor-inputs">
+                    <input type="email" name="correo" id="correo" placeholder="Correo@" class="correo">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class = "contenedor-inputs">
+                    <select class = "ciudades" name="Ciudad_IdCiudad" required>
+                        <option value="1">Bogota</option>
+                        <option value="2">Medellín</option>
+                        <option value="3">Cali</option>
+                        <option value="4">Barranquilla</option>
+                        <option value="5">Cartagena</option>
+                        <option value="6">Soacha</option>
+                        <option value="7">Cúcuta</option>
+                    </select>
+                </div>
+        </div>
+        <div class="botones">
+            <button class="btn1" type="submit" name="registrar" id="registrar">
+                Registrar
+            </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#">
+                    <img src="Imagenes/logo1.png" alt="Logo de la PapeleriaLaUniversidad">
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="#">Catalogo</a></li>
+            <li><a href="">Servicios</a></li>
+            <li><a href=""> Acerca de</a></li>
+            <li><a href=""> Contacto</a></li>
+        </div>
+        <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Descubre la mejor calidad</p>
+            <p>Suscribete a nuestras redes sociales</p>
+        </div>
+        <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+                <a href="https://www.instagram.com/creacioneseeart/"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://twitter.com/EEArt1"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>_copy; 2023 <b>EyeArt</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
+</body>
+</html>
