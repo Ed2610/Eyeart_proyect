@@ -1,4 +1,3 @@
-<!Doctatype>
 <html>
     <head>
         <style>
